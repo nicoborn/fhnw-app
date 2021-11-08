@@ -11,9 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
-import ch.fhnw.acrm.business.service.CustomerService;
 import ch.fhnw.acrm.business.service.ExpenseService;
-import ch.fhnw.acrm.data.domain.Customer;
 import ch.fhnw.acrm.data.domain.Expense;
 
 import javax.validation.ConstraintViolationException;
