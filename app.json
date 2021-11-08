@@ -4,7 +4,7 @@
   "website": "https://andreasmartin.ch",
   "env": {
     "TOKEN_SECRET": {
-      "description": "A secret key for verifying the integrity of JWT.",
+      "description": "1111111111111111111111111111111111111111111111111111111111111111",
       "generator": "secret"
     }
   },
