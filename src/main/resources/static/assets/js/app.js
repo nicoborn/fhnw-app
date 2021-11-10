@@ -95,3 +95,105 @@ function getCustomerJSON(id, name, email, mobile) {
         "mobile": mobile
     });
 }
+
+
+/* EXPENSE */
+
+
+function getExpenseJSON(id, name, description) {
+    if (id === null) {
+        return JSON.stringify({
+            "name": name,
+            "description": description
+        });
+    }
+    return JSON.stringify({
+        "id": id,
+        "name": name,
+        "description": description
+    });
+}
+
+function deleteExpense(expenseID, callback) {
+    $.ajax({
+        type: "DELETE",
+        headers: {
+            "X-XSRF-TOKEN": getCookie("XSRF-TOKEN")
+        },
+        url: serviceEndpointURL + "/api/expense/" + expenseID,
+        success: function (data) {
+            callback(data);
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+            console.log(jqXHR, textStatus, errorThrown);
+        }
+    });
+}
+
+
+function putExpense(expenseID, expense, callbackSuccess, callbackError) {
+    $.ajax({
+        type: "PUT",
+        contentType: "application/json",
+        headers: {
+            "X-XSRF-TOKEN": getCookie("XSRF-TOKEN")
+        },
+        url: serviceEndpointURL + "/api/expense/" + expenseID,
+        data: expense,
+        success: function (data) {
+            callbackSuccess(data);
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+            console.log(jqXHR, textStatus, errorThrown);
+            callbackError(jqXHR.responseJSON.message);
+        }
+    });
+}
+
+
+function getExpense(callback) {
+    $.ajax({
+        type: "GET",
+        dataType: "json",
+        url: serviceEndpointURL + "/api/expense",
+        success: function (data) {
+            callback(data);
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+            console.log(jqXHR, textStatus, errorThrown);
+        }
+    });
+}
+
+function getExpense(expenseID, callback) {
+    $.ajax({
+        type: "GET",
+        dataType: "json",
+        url: serviceEndpointURL + "/api/expense/" + expenseID,
+        success: function (data) {
+            callback(data);
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+            console.log(jqXHR, textStatus, errorThrown);
+        }
+    });
+}
+
+function postExpense(expense, callbackSuccess, callbackError) {
+    $.ajax({
+        type: "POST",
+        contentType: "application/json",
+        headers: {
+            "X-XSRF-TOKEN": getCookie("XSRF-TOKEN")
+        },
+        url: serviceEndpointURL + "/api/expense",
+        data: expense,
+        success: function (data) {
+            callbackSuccess(data);
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+            console.log(jqXHR, textStatus, errorThrown);
+            callbackError(jqXHR.responseJSON.message);
+        }
+    });
+}
