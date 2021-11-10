@@ -117,7 +117,7 @@
                             </li>
                             <div class="d-none d-sm-block topbar-divider"></div>
                             <li class="nav-item dropdown no-arrow">
-                                <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="/logout"><span class="d-none d-lg-inline me-2 text-gray-600 small">Logout</span><img class="border rounded-circle img-profile" src="../assets/img/avatars/avatar1.jpeg"></a>
+                                <div class="nav-item dropdown no-arrow"><a class="nav-link" href="/logout"><span class="d-none d-lg-inline me-2 text-gray-600 small">Logout</span><img class="border rounded-circle img-profile" src="../assets/img/avatars/avatar1.jpeg"></a>
                                     
                                 </div>
                             </li>
@@ -132,21 +132,11 @@
                         </div>
                         <div class="card-body">
                             <div class="row">
-                                <div class="btn-group" role="group"><a class="btn btn-light" role="button" href="/expense/create"> <i class="fa fa-plus-square-o"></i></a></div>
-                                    <div class="modal fade" role="dialog" tabindex="-1" id="confirm-modal">
-                                        <div class="modal-dialog modal-sm" role="document">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h4>Deletion of an <strong>expense</strong>.</h4><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <p>Do you want to delete an expense?</p>
-                                                </div>
-                                                <div class="modal-footer"><button class="btn btn-light" type="button" data-bs-dismiss="modal">Cancel </button><button class="btn btn-primary" id="deleteData" data-id="#" type="button">Delete </button></div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                
                                 <div class="col-md-6 text-nowrap">
+
+                                    <div class="btn-group" role="group"><a class="btn btn-light" role="button" href="/expense/create"> <i class="fa fa-plus-square-o"></i></a></div>
+                                    
                                     <div id="dataTable_length" class="dataTables_length" aria-controls="dataTable"><label class="form-label">Show&nbsp;<select class="d-inline-block form-select form-select-sm">
                                                 <option value="10" selected="">10</option>
                                                 <option value="25">25</option>
@@ -224,6 +214,21 @@
             </footer>
         </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
     </div>
+
+    <div class="modal fade" role="dialog" tabindex="-1" id="confirm-modal">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4>Deletion of an <strong>expense</strong>.</h4><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Do you want to delete an expense?</p>
+                </div>
+                <div class="modal-footer"><button class="btn btn-light" type="button" data-bs-dismiss="modal">Cancel </button><button class="btn btn-primary" id="deleteData" data-id="#" type="button">Delete </button></div>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/js/script.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
