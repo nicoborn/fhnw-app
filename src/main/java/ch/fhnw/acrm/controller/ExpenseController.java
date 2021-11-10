@@ -25,6 +25,6 @@ public class ExpenseController {
 
     @GetMapping("/edit")
     public String getExpenseEditView(){
-        return "../acrm/expenseEdit.html";
+        return "../expense/expenseEdit.html";
     }
 }
