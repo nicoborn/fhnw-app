@@ -165,7 +165,7 @@ function getExpense(callback) {
     });
 }
 
-function getExpense(expenseID, callback) {
+function getExpenses(expenseID, callback) {
     $.ajax({
         type: "GET",
         dataType: "json",
@@ -178,6 +178,7 @@ function getExpense(expenseID, callback) {
         }
     });
 }
+
 
 function postExpense(expense, callbackSuccess, callbackError) {
     $.ajax({
