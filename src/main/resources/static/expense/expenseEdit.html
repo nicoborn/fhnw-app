@@ -71,7 +71,7 @@
         $(document).ready(function () {
             expenseID = getURLParameter('id');
             if (expenseID !== null) {
-                getExpense(expenseID, function (result) {
+                getExpenses(expenseID, function (result) {
                     $('input[name=id]').val(result["id"]);
                     $('input[name=name]').val(result["name"]);
                     $('input[name=description]').val(result["description"]);
