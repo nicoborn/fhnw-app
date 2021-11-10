@@ -30,12 +30,12 @@ public class ExpenseService {
 				expense.setAgent(agentService.getCurrentAgent());
 				return expenseRepository.save(expense);
 			}
-			throw new Exception("Mobile number " + expense.getName() + " already assigned to a customer.");
+			throw new Exception("Mobile number " + expense.getName() + " already assigned to an expense.");
 		}
 		return null;
 	}
 
-	public void deleteCustomer(Long expenseId)
+	public void deleteExpense(Long expenseId)
 	{
 		expenseRepository.deleteById(expenseId);
 	}
@@ -43,7 +43,7 @@ public class ExpenseService {
 	public Expense findExpenseById(Long expenseId) throws Exception {
 		List<Expense> expenseList = expenseRepository.findByIdAndAgentId(expenseId, agentService.getCurrentAgent().getId());
 		if(expenseList.isEmpty()){
-			throw new Exception("No customer with ID "+ expenseId +" found.");
+			throw new Exception("No expense with ID "+ expenseId +" found.");
 		}
 		return expenseList.get(0);
 	}
