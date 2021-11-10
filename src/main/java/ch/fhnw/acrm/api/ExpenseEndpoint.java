@@ -71,7 +71,7 @@ public class ExpenseEndpoint {
     @DeleteMapping(path = "/expense/{expenseId}")
     public ResponseEntity<Void> deleteExpense(@PathVariable(value = "expenseId") String expenseId) {
         try {
-            expenseService.deleteCustomer(Long.parseLong(expenseId));
+            expenseService.deleteExpense(Long.parseLong(expenseId));
         } catch (Exception e) {
             throw new ResponseStatusException(HttpStatus.NOT_ACCEPTABLE, e.getMessage());
         }
