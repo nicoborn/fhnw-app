@@ -29,7 +29,7 @@
     </div>
     <div class="container">
         <div class="page-header">
-            <h2 class="text-center">Edit a&nbsp;<strong>customer</strong>. </h2>
+            <h2 class="text-center">Edit an&nbsp;<strong>expense</strong>. </h2>
         </div>
         <form id="form" method="post">
             <div class="form-group mb-3">
@@ -39,10 +39,7 @@
                 <div class="input-group"><span class="input-group-text">Name </span><input class="form-control" type="text" name="name"></div>
             </div>
             <div class="form-group mb-3">
-                <div class="input-group"><span class="input-group-text">Email </span><input class="form-control" type="email" name="email"></div>
-            </div>
-            <div class="form-group mb-3">
-                <div class="input-group"><span class="input-group-text">Mobile </span><input class="form-control" type="text" name="mobile"></div>
+                <div class="input-group"><span class="input-group-text">Description </span><input class="form-control" type="text" name="description"></div>
             </div>
             <div class="btn-group" role="group"><button class="btn btn-light" type="submit"> <i class="fa fa-save"></i></button></div>
         </form>
@@ -72,19 +69,18 @@
     <script src="../assets/js/webapp.js"></script>
     <script>
         $(document).ready(function () {
-            customerID = getURLParameter('id');
-            if (customerID !== null) {
-                getCustomer(customerID, function (result) {
+            expenseID = getURLParameter('id');
+            if (expenseID !== null) {
+                getExpense(expenseID, function (result) {
                     $('input[name=id]').val(result["id"]);
                     $('input[name=name]').val(result["name"]);
-                    $('input[name=email]').val(result["email"]);
-                    $('input[name=mobile]').val(result["mobile"]);
+                    $('input[name=description]').val(result["description"]);
                 });
             }
 
             $("#form").submit(function (event) {
-                putCustomer(customerID, getCustomerJSON($('input[name=id]').val(), $('input[name=name]').val(), $('input[name=email]').val(), $('input[name=mobile]').val()), function (result) {
-                    window.location.replace("/customer");
+                putExpense(expenseID, getExpenseJSON($('input[name=id]').val(), $('input[name=name]').val(), $('input[name=description]').val()), function (result) {
+                    window.location.replace("/expense");
                 }, function (error) {
                     $("#error-modal").modal('show');
                     $("#error-text").text(error);
