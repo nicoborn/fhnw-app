@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping(path = "/dashboard")
-public class CustomerController {
+public class DashboardController {
 
     @GetMapping
     public String getDashboardView(){
