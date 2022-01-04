@@ -32,7 +32,7 @@ public class ExpenseService {
 			}
 			throw new Exception("Mobile number " + expense.getName() + " already assigned to an expense.");
 		}
-		return null;
+		return expenseRepository.save(expense);
 	}
 
 	public void deleteExpense(Long expenseId)
