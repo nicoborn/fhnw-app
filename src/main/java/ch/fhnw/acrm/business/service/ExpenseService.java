@@ -26,7 +26,7 @@ public class ExpenseService {
 
 	public Expense editExpense(@Valid Expense expense) throws Exception {
 		if (expense.getId() != null) {
-			return expense.getDescription();
+			return expense;
 		}
 		
 		return null;
