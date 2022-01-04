@@ -100,6 +100,7 @@
             $("#form").submit(function (event) {
                 putExpense(expenseID, getExpenseJSON($('input[name=id]').val(), $('input[name=name]').val(), $('input[name=description]').val()), function (result) 
                 {
+                    alert('putexpense');
                     //window.location.replace("/expense");
                 }, function (error) {
                     $("#error-modal").modal('show');
