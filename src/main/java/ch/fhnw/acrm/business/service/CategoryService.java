@@ -28,7 +28,7 @@ public class CategoryService {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
-    public void editCategory(@Valid Agent category) throws Exception {
+    public void editCategory(@Valid Category category) throws Exception {
         
         categoryRepository.save(category);
     }
