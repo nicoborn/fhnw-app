@@ -17,6 +17,7 @@ import ch.fhnw.acrm.data.repository.CategoryRepository;
 
 import javax.validation.Valid;
 import javax.validation.Validator;
+import java.util.List;
 
 @Service
 @Validated
