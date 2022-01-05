@@ -58,7 +58,7 @@ public class CategoryEndpoint {
     }
 
     @PutMapping(path = "/category/{categoryId}", consumes = "application/json", produces = "application/json")
-    public ResponseEntity<category> putCategory(@RequestBody Category category, @PathVariable(value = "categoryId") String categoryId) {
+    public ResponseEntity<Category> putCategory(@RequestBody Category category, @PathVariable(value = "categoryId") String categoryId) {
         try {
             category.setId(Long.parseLong(categoryId));
             category = categoryService.editCategory(category);
