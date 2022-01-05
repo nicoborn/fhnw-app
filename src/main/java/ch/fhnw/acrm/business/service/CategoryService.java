@@ -12,7 +12,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.annotation.Validated;
 import ch.fhnw.acrm.data.domain.Agent;
-import ch.fhnw.acrm.data.domain.category;
+import ch.fhnw.acrm.data.domain.Category;
 import ch.fhnw.acrm.data.repository.CategoryRepository;
 
 import javax.validation.Valid;
