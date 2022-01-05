@@ -33,8 +33,11 @@ public class CategoryService {
 	private AgentService agentService;
 
     public Category editCategory(@Valid Category category) throws Exception {
+        if (category.getId() != null) {
+			return categoryRepository.save(category);
+		}
+		return null;
         
-        categoryRepository.save(category);
     }
 
     public Category findCategoryById(Long categoryId) throws Exception {
