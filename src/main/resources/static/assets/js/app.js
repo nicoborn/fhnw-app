@@ -71,7 +71,6 @@ function deleteCustomer(customerID, callback) {
             "X-XSRF-TOKEN": getCookie("XSRF-TOKEN")
         },
         url: serviceEndpointURL + "/api/customer/" + customerID,
-        data: customerID,
         success: function (data) {
             callback(data);
         },
