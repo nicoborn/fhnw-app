@@ -32,7 +32,7 @@ public class CategoryService {
     @Autowired
 	private AgentService agentService;
 
-    public void editCategory(@Valid Category category) throws Exception {
+    public Category editCategory(@Valid Category category) throws Exception {
         
         categoryRepository.save(category);
     }
