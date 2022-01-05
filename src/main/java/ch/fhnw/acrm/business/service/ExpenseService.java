@@ -25,10 +25,13 @@ public class ExpenseService {
 	private AgentService agentService;
 
 	public Expense editExpense(@Valid Expense expense) throws Exception {
-		if (expense.getId() != null) {
-			return expenseRepository.save(expense);
+		if (expense.getId() == null) {
+			if (expenseRepository.findByName(expense.getName()) == null) {
+				expense.setAgent(agentService.getCurrentAgent());
+				return expenseRepository.save(expense);
+			}
+			throw new Exception("Mobile number " + expense.getName() + " already assigned to an expense.");
 		}
-		
 		return null;
 	}
 
