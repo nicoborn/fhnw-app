@@ -37,6 +37,14 @@ public class CategoryService {
         categoryRepository.save(category);
     }
 
+    public Category findCategoryById(Long categoryId) throws Exception {
+		List<Category> categoryList = categoryRepository.findByCategoryId(categoryId);
+		if(categoryList.isEmpty()){
+			throw new Exception("No category with ID "+categoryId+" found.");
+		}
+		return categoryList.get(0);
+	}
+
     public List<Category> findAllCategoriesByAgent() {
 		return categoryRepository.findByAgentId(agentService.getCurrentAgent().getId());
 	}
