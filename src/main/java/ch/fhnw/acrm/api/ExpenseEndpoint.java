@@ -61,6 +61,7 @@ public class ExpenseEndpoint {
     public ResponseEntity<Expense> putExpense(@RequestBody Expense expense, @PathVariable(value = "expenseId") String expenseId) {
         try {
             expense.setId(Long.parseLong(expenseId));
+            
             expense = expenseService.editExpense(expense);
         } catch (Exception e) {
             throw new ResponseStatusException(HttpStatus.NOT_ACCEPTABLE, e.getMessage());

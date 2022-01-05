@@ -8,7 +8,6 @@ package ch.fhnw.acrm.business.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.annotation.Validated;
-
 import ch.fhnw.acrm.data.domain.Expense;
 import ch.fhnw.acrm.data.repository.ExpenseRepository;
 
