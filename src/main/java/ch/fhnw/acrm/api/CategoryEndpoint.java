@@ -22,7 +22,7 @@ import java.util.List;
 @RequestMapping(path = "/api")
 public class CategoryEndpoint {
     @Autowired
-    private CategoryEndpoint categoryService;
+    private CategoryService categoryService;
 
     @PostMapping(path = "/category", consumes = "application/json", produces = "application/json")
     public ResponseEntity<Category> postCategory(@RequestBody Category category) {
