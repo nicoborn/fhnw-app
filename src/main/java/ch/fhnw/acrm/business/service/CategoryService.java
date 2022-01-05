@@ -29,6 +29,8 @@ public class CategoryService {
     Validator validator;
     @Autowired
     private PasswordEncoder passwordEncoder;
+    @Autowired
+	private AgentService agentService;
 
     public void editCategory(@Valid Category category) throws Exception {
         
