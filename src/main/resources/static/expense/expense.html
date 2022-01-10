@@ -163,8 +163,9 @@
 
             $("#deleteData").click(function () {
                 deleteExpense($(this).attr('data-id'), function (result) {
-                    $('#confirm-modal').modal('hide');
-                    loadData();
+                    //$('#confirm-modal').modal('hide');
+                    //loadData();
+                    window.location.replace("/expense");
                 });
             });
         });
