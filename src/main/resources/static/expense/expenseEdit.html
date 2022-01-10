@@ -96,6 +96,8 @@
                     $('input[name=description]').val(result["description"]);
                 });
             }
+            console.log(expenseID);
+            alert(expenseID);
 
             $("#form").submit(function (event) {
                 putExpense(expenseID, getExpenseJSON($('input[name=id]').val(), $('input[name=name]').val(), $('input[name=description]').val()), function (result) {
