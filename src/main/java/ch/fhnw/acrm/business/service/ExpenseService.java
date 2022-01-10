@@ -33,8 +33,6 @@ public class ExpenseService {
 		} else {
 			return expenseRepository.save(expense);
 		}
-		
-		return null;
 	}
 
 	public void deleteExpense(Long expenseId)
