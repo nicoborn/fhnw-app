@@ -31,6 +31,9 @@ public class ExpenseService {
 			}
 			throw new Exception("Mobile number " + expense.getName() + " already assigned to an expense.");
 		} else {
+			if (expense.getAgent() == null) {
+				expense.setAgent(agentService.getCurrentAgent());
+			}
 			return expenseRepository.save(expense);
 		}
 	}
