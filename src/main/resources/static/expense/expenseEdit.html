@@ -101,7 +101,11 @@
 
             $("#form").submit(function (event) {
                 putExpense(expenseID, getExpenseJSON($('input[name=id]').val(), $('input[name=name]').val(), $('input[name=description]').val()), function (result) {
-                    window.location.replace("/expense");
+                    
+                    alert($('input[name=id]').val());
+                    alert($('input[name=name]').val());
+                    alert($('input[name=description]').val());
+                    //window.location.replace("/expense");
                 }, function (error) {
                     $("#error-modal").modal('show');
                     $("#error-text").text(error);
