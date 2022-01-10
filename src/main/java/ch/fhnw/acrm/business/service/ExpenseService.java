@@ -30,7 +30,10 @@ public class ExpenseService {
 				return expenseRepository.save(expense);
 			}
 			throw new Exception("Mobile number " + expense.getName() + " already assigned to an expense.");
+		} else {
+			return expenseRepository.save(expense);
 		}
+		
 		return null;
 	}
 
