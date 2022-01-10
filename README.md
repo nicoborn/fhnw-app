@@ -1,11 +1,8 @@
-# A-CRM Web App
+# fh-api
+FH API
+# Expense tracker
 
-This is a minimal CRM Web App (A-CRM - Insurance Agency CRM) as a template for students. 
-
-[![License](https://img.shields.io/:license-apache-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
-[![Deploy to Heroku](https://img.shields.io/badge/deploy%20to-Heroku-6762a6.svg?longCache=true)](https://heroku.com/deploy)
-
-> 🚧 **This is a template project**: Make sure that you adapt this documentation and the source code in this project according to your needs and use case.
+This is an expense tracker, enabling the functionalities of Create, Read, Update and Delete for expenses after accessing the Web app through an authorized account.
 
 #### Contents:
 - [Analysis](#analysis)
@@ -30,24 +27,24 @@ This is a minimal CRM Web App (A-CRM - Insurance Agency CRM) as a template for s
 
 ### Scenario
 
-A-CRM (Agency Customer-Relationship-Management) is the smallest possible and lightweight demonstration tool that allows agents to manage their customer data. Agents have an own access to their customer data.
+An expense tracker allows companies and organizations to keep an overview of their finances. Since receipts are easy to lose, this tracker app stores these important documents and hence provides a better overview of their expenses. 
 
 ### User Stories
-1.	As an insurance agent, I want to have a Web app so that I can use it on different mobile devices and on desktop computers.
-2.	As an insurance agent, I want to see a consistent visual appearance so that I can navigate easily, and it looks consistent.
-3.	As an insurance agent, I want to use list views so that I can explore and read my business data.
-4.	As an insurance agent, I want to use edit and create views so that I can maintain my business data.
-5.	As an insurance agent, I want to create an account so that I can get access to the Web app.
-6.	As an insurance agent, I want to log-in so that I can authenticate myself.
-7.	As an insurance agent, I want to edit my profile so that my data is stored securely.
+1.	As an online-shop owner, I want to have a Web app where I can track my expenses on my computer.
+2.	As an online-shop owner, I want to navigate through my and gain an overview of my finances.
+3.	As an online-shop owner, I want to analyze my expenses by creating lists in a database and select specific expenses.
+4.	As an online-shop owner, I want to edit and create lists in order to keep my finances up to date and retain an overview.
+5.	As an online-shop owner, I want to create an account to access the Web app.
+6.	As an online-shop owner, I want to log-in to the Web app to gain authorized access.
+7.	As an online-shop owner, I want to edit my profile so that my profile is up to date, and the data remains securely stored.
 
 ### Use Case
-![](images/use-case.png)
+<img width="254" alt="image" src="https://user-images.githubusercontent.com/82437415/148421199-2feb4df0-920b-44aa-af2b-b19df82b785b.png">
 
-- UC-1 [Login on A-CRM]: Agents can log-in by entering an email address and password. As an extension, new agents my register first.
-- UC-2 [Register on A-CRM]: Agents can register to get an account (profile) to access the A-CRM system.
-- UC-3 [Edit a customer]: Agents can create, update and delete customers.
-- UC-4 [Show a customer list]: Agents can get an overview over their customers based on a customer list. As an extension they can create, update and delete customers (UC-3).
+- UC-1 [Login to expense tracker]: Agents can log-in after authorizing themselves with a viable username and password. 
+- UC-2 [Register User]: New users have the option to register themselves with new account details to access the Web app.
+- UC-3 [View/Edit expenses]: Agents can create, read, update and delete expenses.
+- UC-4 [Show expense list]: Agents can get an overview of their expenses as a list. The expense list is being created in a database.
 
 ## Design
 
