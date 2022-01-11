@@ -7,7 +7,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
-import java.util.Date;
 
 @Entity
 public class Category {
@@ -16,6 +15,9 @@ public class Category {
 	@GeneratedValue
 	private Long id;
 	private String name;
+    @ManyToOne
+	@JsonIgnore
+	private Customer customer;
 
 	public Long getId() {
 		return id;
@@ -27,6 +29,14 @@ public class Category {
 
 	public String getName() {
 		return name;
+	}
+
+    public Customer getCustomer() {
+		return customer;
+	}
+
+	public void setCustomer(Customer customer) {
+		this.customer = customer;
 	}
 
 }
