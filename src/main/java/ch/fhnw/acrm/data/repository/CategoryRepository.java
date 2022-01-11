@@ -5,7 +5,7 @@
 
 package ch.fhnw.acrm.data.repository;
 
-import ch.fhnw.acrm.data.domain.Expense;
+import ch.fhnw.acrm.data.domain.Category;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
@@ -16,5 +16,5 @@ import java.util.List;
 public interface CategoryRepository extends JpaRepository<Category, Long> {
 	Category findByName(String name);
 	List<Category> findByAgentId(Long agentId);
-	List<Expense> findByIdAndAgentId(Long expenseId, Long agentId);
+	List<Category> findByIdAndAgentId(Long categoryId, Long agentId);
 }
