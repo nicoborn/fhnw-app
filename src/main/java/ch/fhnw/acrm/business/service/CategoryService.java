@@ -20,6 +20,8 @@ public class CategoryService {
 
 	@Autowired
 	private CategoryRepository categoryRepository;
+	@Autowired
+	private AgentService agentService;
 	
 	public Category editCategory(@Valid Category category) throws Exception {
 		if (category.getId() == null) {
