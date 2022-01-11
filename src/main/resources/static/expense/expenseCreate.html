@@ -90,9 +90,7 @@
         $(document).ready(function () {
             $("#form").submit(function (event) {
 
-                alert($('input[name=expensedate]').val());
-                
-                postExpense(getExpenseJSON(null, $('input[name=name]').val(), $('input[name=description]').val(), $('input[name=expensedate]').val()), function (result) {
+                postExpense(getExpenseJSON(null, $('input[name=name]').val(), $('input[name=description]').val()), function (result) {
                     window.location.replace("/expense");
                 }, function (error) {
                     $("#error-modal").modal('show');

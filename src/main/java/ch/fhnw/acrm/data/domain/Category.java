@@ -10,16 +10,12 @@ import javax.persistence.ManyToOne;
 import java.util.Date;
 
 @Entity
-public class Expense {
+public class Category {
 
 	@Id
 	@GeneratedValue
 	private Long id;
 	private String name;
-	private String description;
-	@ManyToOne
-	@JsonIgnore
-	private Agent agent;
 
 	public Long getId() {
 		return id;
@@ -31,26 +27,6 @@ public class Expense {
 
 	public String getName() {
 		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-	
-	public String getDescription() {
-		return description;
-	}
-
-	public void setDescription(String description) {
-		this.description = description;
-	}
-	
-	public Agent getAgent() {
-		return agent;
-	}
-
-	public void setAgent(Agent agent) {
-		this.agent = agent;
 	}
 
 }

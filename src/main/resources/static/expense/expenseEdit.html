@@ -97,12 +97,11 @@
                     $('input[name=id]').val(result["id"]);
                     $('input[name=name]').val(result["name"]);
                     $('input[name=description]').val(result["description"]);
-                    $('input[name=expensedate]').val(result["expensedate"]);
                 });
             }
 
             $("#form").submit(function (event) {
-                putExpense(expenseID, getExpenseJSON($('input[name=id]').val(), $('input[name=name]').val(), $('input[name=description]').val(), $('input[name=expensedate]').val()), function (result) {
+                putExpense(expenseID, getExpenseJSON($('input[name=id]').val(), $('input[name=name]').val(), $('input[name=description]').val()), function (result) {
                     window.location.replace("/expense");
                 }, function (error) {
                     $("#error-modal").modal('show');
