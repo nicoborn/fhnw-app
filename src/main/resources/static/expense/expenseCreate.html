@@ -91,9 +91,7 @@
             $("#form").submit(function (event) {
 
                 alert($('input[name=expensedate]').val());
-                const date1 = new Date($('input[name=expensedate]').val());
-                alert(date1);
-
+                
                 postExpense(getExpenseJSON(null, $('input[name=name]').val(), $('input[name=description]').val(), $('input[name=expensedate]').val()), function (result) {
                     window.location.replace("/expense");
                 }, function (error) {
