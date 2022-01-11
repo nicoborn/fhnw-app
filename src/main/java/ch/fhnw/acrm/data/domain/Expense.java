@@ -7,7 +7,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
-import java.time.Date;
+import java.util.Date;
 
 @Entity
 public class Expense {
