@@ -15,6 +15,7 @@ public class Expense {
 	private Long id;
 	private String name;
 	private String description;
+	private Date expensedate;
 	@ManyToOne
 	@JsonIgnore
 	private Agent agent;
@@ -41,6 +42,14 @@ public class Expense {
 
 	public void setDescription(String description) {
 		this.description = description;
+	}
+
+	public Date getExpenseDate() {
+		return expensedate;
+	}
+
+	public void setExpenseDate(Date expensedate) {
+		this.expensedate = expensedate;
 	}
 	
 	public Agent getAgent() {
