@@ -17,7 +17,7 @@ public class Category {
 	private String name;
     @ManyToOne
 	@JsonIgnore
-	private Customer customer;
+	private Agent agent;
 
 	public Long getId() {
 		return id;
@@ -31,12 +31,12 @@ public class Category {
 		return name;
 	}
 
-    public Customer getCustomer() {
-		return customer;
+    public Agent getAgent() {
+		return agent;
 	}
 
-	public void setCustomer(Customer customer) {
-		this.customer = customer;
+	public void setAgent(Agent agent) {
+		this.agent = agent;
 	}
 
 }
