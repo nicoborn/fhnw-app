@@ -7,7 +7,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
-import java.time.LocalDate;
+import java.time.Date;
 
 @Entity
 public class Expense {
@@ -17,7 +17,7 @@ public class Expense {
 	private Long id;
 	private String name;
 	private String description;
-	private LocalDate expensedate;
+	private Date expensedate;
 	@ManyToOne
 	@JsonIgnore
 	private Agent agent;
@@ -46,11 +46,11 @@ public class Expense {
 		this.description = description;
 	}
 
-	public LocalDate getExpenseDate() {
+	public Date getExpenseDate() {
 		return expensedate;
 	}
 
-	public void setExpenseDate(LocalDate expensedate) {
+	public void setExpenseDate(Date expensedate) {
 		this.expensedate = expensedate;
 	}
 	
