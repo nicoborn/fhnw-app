@@ -96,16 +96,10 @@
                     $('input[name=description]').val(result["description"]);
                 });
             }
-            console.log(expenseID);
-            alert(expenseID);
-
+            
             $("#form").submit(function (event) {
                 putExpense(expenseID, getExpenseJSON($('input[name=id]').val(), $('input[name=name]').val(), $('input[name=description]').val()), function (result) {
-                    
-                    alert($('input[name=id]').val());
-                    alert($('input[name=name]').val());
-                    alert($('input[name=description]').val());
-                    //window.location.replace("/expense");
+                    window.location.replace("/expense");
                 }, function (error) {
                     $("#error-modal").modal('show');
                     $("#error-text").text(error);
