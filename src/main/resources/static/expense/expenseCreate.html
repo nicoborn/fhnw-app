@@ -99,6 +99,15 @@
 
             $(loadData());
 
+            const selectedTextPick = "";
+            $('.form-select').change(function() {
+                var selectedText = $(this).find('option:selected').map(function() {
+                    return $(this).text();
+                }).get().join(',');
+                selectedTextPick = selectedText;
+                console.log(selectedText);
+            });
+
             function loadData() {
                 getCategory(function (result) {
                     $("#dropdown-boot").empty();
@@ -109,7 +118,7 @@
             }
 
             $("#form").submit(function (event) {
-                postExpense(getExpenseJSON(null, $('input[name=name]').val(), $('input[name=description]').val(), $('.form-select').val(), $('.form-select').text()), function (result) {
+                postExpense(getExpenseJSON(null, $('input[name=name]').val(), $('input[name=description]').val(), $('.form-select').val(), selectedTextPick), function (result) {
                     window.location.replace("/expense");
                 }, function (error) {
                     $("#error-modal").modal('show');
