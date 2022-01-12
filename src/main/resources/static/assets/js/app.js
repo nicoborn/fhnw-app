@@ -101,33 +101,18 @@ function getCustomerJSON(id, name, email, mobile) {
 
 function getExpenseJSON(id, name, description, categoryId, categoryName) {
 
-    var catJSON = getCategoryJSON(categoryId, categoryName);
-    alert(catJSON);
-    catJSON = JSON.parse(catJSON);
-    alert("parsed: " + catJSON);
-    var wholeobjectJSON = JSON.stringify({
-        "name": name,
-        "description": description,
-        "category": {"id": categoryId, "name": categoryName}
-    });
-
-    alert(wholeobjectJSON);
-
-    var request = "{\"name\":\"Nico Born\",\"description\":\"Test Description\",\"category\":{\"id\":\"27\",\"name\":\" Versicherung\"}}";
-    return request;
-
     if (id === null) {
         return JSON.stringify({
             "name": name,
             "description": description,
-            "category": {catJSON}
+            "category": {"id": categoryId, "name": categoryName}
         });
     }
     return JSON.stringify({
         "id": id,
         "name": name,
         "description": description,
-        "category": {catJSON}
+        "category": {"id": categoryId, "name": categoryName}
     });
 }
 
