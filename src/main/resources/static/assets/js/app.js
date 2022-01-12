@@ -101,8 +101,17 @@ function getCustomerJSON(id, name, email, mobile) {
 
 function getExpenseJSON(id, name, description, categoryId, categoryName) {
 
-    const catJSON = getCategoryJSON(categoryId, categoryName);
+    var catJSON = getCategoryJSON(categoryId, categoryName);
     alert(catJSON);
+
+    var wholeobjectJSON = JSON.stringify({
+        "name": name,
+        "description": description,
+        "category": catJSON
+    });
+
+    alert(wholeobjectJSON);
+    
     if (id === null) {
         return JSON.stringify({
             "name": name,
