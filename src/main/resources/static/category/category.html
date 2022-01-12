@@ -161,8 +161,7 @@
 
             $("#deleteData").click(function () {
                 deleteCategory($(this).attr('data-id'), function (result) {
-                    $('#confirm-modal').modal('hide');
-                    loadData();
+                    window.location.replace("/category");
                 });
             });
         });
