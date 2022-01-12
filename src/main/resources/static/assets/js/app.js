@@ -107,11 +107,11 @@ function getExpenseJSON(id, name, description, categoryId, categoryName) {
     var wholeobjectJSON = JSON.stringify({
         "name": name,
         "description": description,
-        "category": catJSON
+        "category": {catJSON}
     });
 
     alert(wholeobjectJSON);
-    
+
     if (id === null) {
         return JSON.stringify({
             "name": name,
