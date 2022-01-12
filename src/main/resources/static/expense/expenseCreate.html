@@ -114,8 +114,9 @@
             }
 
             $("#form").submit(function (event) {
-                
-                postExpense(getExpenseJSON(null, $('input[name=name]').val(), $('input[name=description]').val()), function (result) {
+                var val1 = $('.form-select').val();
+                alert(val1);
+                postExpense(getExpenseJSON(null, $('input[name=name]').val(), $('input[name=description]').val(), $('.form-select').val()), function (result) {
                     window.location.replace("/expense");
                 }, function (error) {
                     $("#error-modal").modal('show');
