@@ -99,18 +99,22 @@ function getCustomerJSON(id, name, email, mobile) {
 
 /* EXPENSE */
 
+function getExpenseJSON(id, name, description, categoryId, categoryName) {
 
-function getExpenseJSON(id, name, description) {
+    const catJSON = getCategoryJSON(categoryId, categoryName);
+    alert(catJSON);
     if (id === null) {
         return JSON.stringify({
             "name": name,
-            "description": description
+            "description": description,
+            "category": catJSON
         });
     }
     return JSON.stringify({
         "id": id,
         "name": name,
-        "description": description
+        "description": description,
+        "category": catJSON
     });
 }
 
