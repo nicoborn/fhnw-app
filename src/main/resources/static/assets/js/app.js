@@ -103,7 +103,8 @@ function getExpenseJSON(id, name, description, categoryId, categoryName) {
 
     var catJSON = getCategoryJSON(categoryId, categoryName);
     alert(catJSON);
-
+    catJSON = JSON.parse(catJSON);
+    alert("parsed: " + catJSON);
     var wholeobjectJSON = JSON.stringify({
         "name": name,
         "description": description,
