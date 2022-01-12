@@ -94,20 +94,22 @@
     <script src="../assets/js/webapp.js"></script>
     <script>
         $(document).ready(function () {
-            $("#form").submit(function (event) {
-                $(loadData());
 
-                function loadData() {
-                    alert("load data");
-                    getCategory(function (result) {
-                        alert("cat method");
-                        $("#dropdown-boot").empty();
-                        $.each(result, function (i, item) {
-                            $("#dropdown-boot").append($("<tr>").append($("<td>").text(item.id)).append($("<td>").text(item.name)).append($("<td>").text(item.description)));
-                        });
+            $(loadData());
+
+            function loadData() {
+                alert("load data");
+                getCategory(function (result) {
+                    alert("cat method");
+                    $("#dropdown-boot").empty();
+                    $.each(result, function (i, item) {
+                        $("#dropdown-boot").append($("<tr>").append($("<td>").text(item.id)).append($("<td>").text(item.name)).append($("<td>").text(item.description)));
                     });
-                }
+                });
+            }
 
+            $("#form").submit(function (event) {
+                
                 postExpense(getExpenseJSON(null, $('input[name=name]').val(), $('input[name=description]').val()), function (result) {
                     window.location.replace("/expense");
                 }, function (error) {
