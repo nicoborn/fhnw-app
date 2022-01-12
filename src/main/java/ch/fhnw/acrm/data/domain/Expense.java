@@ -21,7 +21,6 @@ public class Expense {
 	@JsonIgnore
 	private Agent agent;
 	@ManyToOne
-	@JsonIgnore
 	private Category category;
 
 	public Long getId() {
