@@ -117,14 +117,14 @@ function getExpenseJSON(id, name, description, categoryId, categoryName) {
         return JSON.stringify({
             "name": name,
             "description": description,
-            "category": {catJSON}
+            "category": 1
         });
     }
     return JSON.stringify({
         "id": id,
         "name": name,
         "description": description,
-        "category": {catJSON}
+        "category": 1
     });
 }
 
