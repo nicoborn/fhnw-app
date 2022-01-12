@@ -113,6 +113,8 @@ function getExpenseJSON(id, name, description, categoryId, categoryName) {
 
     alert(wholeobjectJSON);
 
+    var request = "{\"name\":\"Nico Born\",\"description\":\"Test Description\",\"category\":{\"id\":\"27\",\"name\":\" Versicherung\"}}";
+    return request;
     if (id === null) {
         return JSON.stringify({
             "name": name,
