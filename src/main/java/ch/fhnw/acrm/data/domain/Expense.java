@@ -20,6 +20,9 @@ public class Expense {
 	@ManyToOne
 	@JsonIgnore
 	private Agent agent;
+	@ManyToOne
+	@JsonIgnore
+	private Category category;
 
 	public Long getId() {
 		return id;
@@ -51,6 +54,14 @@ public class Expense {
 
 	public void setAgent(Agent agent) {
 		this.agent = agent;
+	}
+
+	public Category getCategory() {
+		return category;
+	}
+
+	public void setCategory(Category category) {
+		this.category = category;
 	}
 
 }
