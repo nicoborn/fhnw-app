@@ -292,8 +292,9 @@
                 getExpense(function (result) {
                     var totalExpenses = 0;
                     $.each(result, function (i, item) {
-                        
+                        totalExpenses += item.amount;
                     });
+                    alert(totalExpenses);
                 });
             }
 
