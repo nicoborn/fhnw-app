@@ -110,32 +110,26 @@
             });
 
             expenseID = getURLParameter('id');
-            const idtest = "";
-            var savedCategoryId = "";
             if (expenseID !== null) {
                 getExpenses(expenseID, function (result) {
                     $('input[name=id]').val(result["id"]);
                     $('input[name=name]').val(result["name"]);
                     $('input[name=description]').val(result["description"]);
 
-                    savedCategoryId = result["category"]["id"];
-                    idtest = result["category"]["id"];
-                    console.log("within method:" + result["category"]["id"])
+                    var savedCategoryId = result["category"]["id"];
                     $("#dropdown-boot").append($("<option value=\"" + result["category"]["id"] + "\" selected> " + result["category"]["name"] + "</option>"));
+
+                    getCategory(function (result) {
+                        $("#dropdown-boot").empty();
+                        $.each(result, function (i, item) {
+                            if(item.id !== savedCategoryId) {
+                                console.log(item.id);
+                                $("#dropdown-boot").append($("<option value=\"" + item.id + "\"> " + item.name + "</option>"));
+                            }
+                        });
+                    });
                 });
             }
-
-            console.log("savedcategory: " + savedCategoryId);
-            console.log("const savedcategory: " + savedCategoryId);
-            getCategory(function (result) {
-                $("#dropdown-boot").empty();
-                $.each(result, function (i, item) {
-                    if(item.id !== savedCategoryId) {
-                        console.log(item.id);
-                        $("#dropdown-boot").append($("<option value=\"" + item.id + "\"> " + item.name + "</option>"));
-                    }
-                });
-            });
 
             $("#form").submit(function (event) {
                 putExpense(expenseID, getExpenseJSON($('input[name=id]').val(), $('input[name=name]').val(), $('input[name=description]').val()), function (result) {
