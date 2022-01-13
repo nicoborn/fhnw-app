@@ -118,6 +118,7 @@
                     $('input[name=description]').val(result["description"]);
 
                     savedCategoryId = result["category"]["id"];
+                    console.log("within method:" + result["category"]["id"])
                     $("#dropdown-boot").append($("<option value=\"" + result["category"]["id"] + "\" selected> " + result["category"]["name"] + "</option>"));
                 });
             }
