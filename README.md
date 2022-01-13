@@ -185,10 +185,10 @@ The Web application can be accessed over the browser by using the following addr
 ## Project Management
 
 ### Roles
-Head of the Project: Nico Born
-All-rounder: Marino Bottacin
-All-rounder: Laurent Zeugin
-All-rounder: Kenan Ahmetasevic
+- Head of the Project: Nico Born
+- All-rounder: Marino Bottacin
+- All-rounder: Laurent Zeugin
+- All-rounder: Kenan Ahmetasevic
 
 ### Milestones
 ![](images/Project phases.PNG)
