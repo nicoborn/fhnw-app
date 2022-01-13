@@ -64,7 +64,7 @@ The `ch.fhnw.acrm.data.domain` package contains the following domain objects / e
 
 ### Business Logic Design
 
-The `ch.fhnw.acrm.business.service` package contains classes of the following business services:
+The package 'https://fhnw-project.herokuapp.com/' contains the data of created persons. With this data, users are created who can store information about their spending.
 
 ![](images/business-service.png)
 
