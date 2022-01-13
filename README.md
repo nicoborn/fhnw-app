@@ -191,7 +191,7 @@ All-rounder: Laurent Zeugin
 All-rounder: Kenan Ahmetasevic
 
 ### Milestones
-![](images/Project phases.png)
+![](images/Project phases.PNG)
 
 1.	Planning and strategy: definition of goals
 2.	Requirements: Specifications, use case analysis
