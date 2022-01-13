@@ -17,6 +17,7 @@ public class Expense {
 	private Long id;
 	private String name;
 	private String description;
+	private Double amount;
 	@ManyToOne
 	@JsonIgnore
 	private Agent agent;
@@ -45,6 +46,14 @@ public class Expense {
 
 	public void setDescription(String description) {
 		this.description = description;
+	}
+
+	public Double getAmount() {
+		return amount;
+	}
+
+	public void setAmount(String amount) {
+		this.amount = amount;
 	}
 	
 	public Agent getAgent() {
