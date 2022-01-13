@@ -191,7 +191,7 @@ The Web application can be accessed over the browser by using the following addr
 - All-rounder: Kenan Ahmetasevic
 
 ### Milestones
-![](images/Project phases.PNG)
+![](images/project-phases.png)
 
 1.	Planning and strategy: definition of goals
 2.	Requirements: Specifications, use case analysis
