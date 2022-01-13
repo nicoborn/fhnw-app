@@ -110,7 +110,7 @@
             });
 
             expenseID = getURLParameter('id');
-            var savedCategoryId;
+            var savedCategoryId = "";
             if (expenseID !== null) {
                 getExpenses(expenseID, function (result) {
                     $('input[name=id]').val(result["id"]);
