@@ -120,7 +120,6 @@
                     $("#dropdown-boot").append($("<option value=\"" + result["category"]["id"] + "\" selected> " + result["category"]["name"] + "</option>"));
 
                     getCategory(function (result) {
-                        $("#dropdown-boot").empty();
                         $.each(result, function (i, item) {
                             if(item.id !== savedCategoryId) {
                                 console.log(item.id);
