@@ -118,15 +118,17 @@
                     $('input[name=description]').val(result["description"]);
 
                     savedCategoryId = result["category"]["id"];
-                    $("#dropdown-boot").append($("<option value=\"" + result["category"]["id"] + "\"> " + result["category"]["name"] + "</option>"));
+                    console.log(savedCategoryId);
+                    $("#dropdown-boot").append($("<option value=\"" + result["category"]["id"] + "\" selected> " + result["category"]["name"] + "</option>"));
                 });
             }
 
             getCategory(function (result) {
                 $("#dropdown-boot").empty();
                 $.each(result, function (i, item) {
-                    if(item.id != savedCategoryId);
-                    $("#dropdown-boot").append($("<option value=\"" + item.id + "\"> " + item.name + "</option>"));
+                    if(item.id != savedCategoryId) {
+                        $("#dropdown-boot").append($("<option value=\"" + item.id + "\"> " + item.name + "</option>"));
+                    }
                 });
             });
 
