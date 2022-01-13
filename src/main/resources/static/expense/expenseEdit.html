@@ -122,7 +122,6 @@
                     getCategory(function (result) {
                         $.each(result, function (i, item) {
                             if(item.id !== savedCategoryId) {
-                                console.log(item.id);
                                 $("#dropdown-boot").append($("<option value=\"" + item.id + "\"> " + item.name + "</option>"));
                             }
                         });
@@ -131,7 +130,7 @@
             }
 
             $("#form").submit(function (event) {
-                putExpense(expenseID, getExpenseJSON($('input[name=id]').val(), $('input[name=name]').val(), $('input[name=description]').val()), function (result) {
+                putExpense(expenseID, getExpenseJSON($('input[name=id]').val(), $('input[name=name]').val(), $('input[name=description]').val(), $('.form-select').val(), selectedTextPick), function (result) {
                     window.location.replace("/expense");
                 }, function (error) {
                     $("#error-modal").modal('show');
