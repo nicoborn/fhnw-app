@@ -110,7 +110,7 @@
             });
 
             expenseID = getURLParameter('id');
-            var savedCategoryId = 0;
+            var savedCategoryId;
             if (expenseID !== null) {
                 getExpenses(expenseID, function (result) {
                     $('input[name=id]').val(result["id"]);
@@ -122,10 +122,10 @@
                 });
             }
 
+            console.log("savedcategory: " + savedCategoryId);
             getCategory(function (result) {
                 $("#dropdown-boot").empty();
                 $.each(result, function (i, item) {
-                    console.log("savedcategory: " + savedCategoryId);
                     if(item.id != savedCategoryId) {
                         console.log(item.id);
                         $("#dropdown-boot").append($("<option value=\"" + item.id + "\"> " + item.name + "</option>"));
