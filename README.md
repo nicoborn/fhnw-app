@@ -185,19 +185,19 @@ The Web application can be accessed over the browser by using the following addr
 ## Project Management
 
 ### Roles
-- All-rounder 😉: [Andreas Martin](https://andreasmartin.ch)
+Head of the Project: Nico Born
+All-rounder: Marino Bottacin
+All-rounder: Laurent Zeugin
+All-rounder: Kenan Ahmetasevic
 
 ### Milestones
-1. **Analysis**: Scenario ideation, use case analysis and user story writing.
-2. **Prototype Design**: Creation of Bootstrap static web-design prototype.
-3. **Domain Design**: Definition of domain model.
-4. **Business Logic and API Design**: Definition of business logic and API.
-5. **Data and API Implementation**: Implementation of data access and business logic layers, and API.
-6. **Security and Frontend Implementation**: Integration of security framework and frontend realisation.
-7. **Deployment**: Deployment of Web application on cloud infrastructure.
+![](images/Project phases.png)
 
-#### Maintainer
-- [Andreas Martin](https://andreasmartin.ch)
+1.	Planning and strategy: definition of goals
+2.	Requirements: Specifications, use case analysis
+3.	Design: conception
+4.	Layout: create website
+5.	Implementation: technical implementation, implementation of business logic and API
+6.	Test: testing: final acceptance
+7.	Launch: Launch of Web application on Heroku
 
-#### License
-- [Apache License, Version 2.0](blob/master/LICENSE)
