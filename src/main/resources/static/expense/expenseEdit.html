@@ -70,6 +70,14 @@
                                 <div class="form-group mb-3">
                                     <div class="input-group"><span class="input-group-text">Date </span><input class="form-control" type="date" name="expensedate"/></div>
                                 </div>
+                                <div class="form-group mb-3">
+                                    <div class="input-group">
+                                        <span class="input-group-text">Category </span>
+                                        <select class="form-select" aria-label="Default select example" id="dropdown-boot">
+                                            
+                                        </select>
+                                    </div>
+                                </div>
                                 <div class="btn-group" role="group"><button class="btn btn-light" type="submit"> <i class="fa fa-save"></i></button></div>
                             </form>
                         </div>
@@ -91,6 +99,23 @@
     <script src="../assets/js/webapp.js"></script>
     <script>
         $(document).ready(function () {
+
+            var selectedTextPick = "";
+            $('.form-select').change(function() {
+                var selectedText = $(this).find('option:selected').map(function() {
+                    return $(this).text();
+                }).get().join(',');
+                selectedTextPick = selectedText;
+                console.log(selectedText);
+            });
+
+            getCategory(function (result) {
+                $("#dropdown-boot").empty();
+                $.each(result, function (i, item) {
+                    $("#dropdown-boot").append($("<option value=\"" + item.id + "\"> " + item.name + "</option>"));
+                });
+            });
+
             expenseID = getURLParameter('id');
             if (expenseID !== null) {
                 getExpenses(expenseID, function (result) {
