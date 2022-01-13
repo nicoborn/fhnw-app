@@ -82,8 +82,8 @@
                                             <th>Date</th>
                                             <th>Name</th>
                                             <th>Description</th>
-                                            <th>Category</th>
                                             <th>Amount</th>
+                                            <th>Category</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -94,29 +94,13 @@
                                             <th>Date</th>
                                             <th>Name</th>
                                             <th>Description</th>
-                                            <th>Category</th>
                                             <th>Amount</th>
+                                            <th>Category</th>
                                             <th></th>
                                         </tr>
                                     </tfoot>
                                 </table>
                             </div>
-                            <!--<div class="row">
-                                <div class="col-md-6 align-self-center">
-                                    <p id="dataTable_info" class="dataTables_info" role="status" aria-live="polite">Showing 1 to 10 of 27</p>
-                                </div>
-                                <div class="col-md-6">
-                                    <nav class="d-lg-flex justify-content-lg-end dataTables_paginate paging_simple_numbers">
-                                        <ul class="pagination">
-                                            <li class="page-item disabled"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
-                                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                            <li class="page-item"><a class="page-link" href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
-                                        </ul>
-                                    </nav>
-                                </div>
-                            </div>-->
                         </div>
                     </div>
                 </div>
@@ -158,7 +142,7 @@
                 getExpense(function (result) {
                     $("#tableData").empty();
                     $.each(result, function (i, item) {
-                        $("#tableData").append($("<tr>").append($("<td>").text(item.id)).append($("<td>").text(item.expensedate)).append($("<td>").text(item.name)).append($("<td>").text(item.description)).append($("<td>").text(item.category["name"])).append($(
+                        $("#tableData").append($("<tr>").append($("<td>").text(item.id)).append($("<td>").text(item.expensedate)).append($("<td>").text(item.name)).append($("<td>").text(item.description)).append($("<td>").text(item.amount)).append($("<td>").text(item.category["name"])).append($(
                             "<td>\n" +
                             "<div class=\"btn-group btn-group-sm\" role=\"group\"><a class=\"btn btn-light\" role=\"button\" href=\"/expense/edit?id=" + item.id + "\"> <i class=\"fa fa-edit\"></i></a><button class=\"btn btn-light\" data-id=\"" + item.id + "\" type=\"button\" data-bs-target=\"#confirm-modal\" data-bs-toggle=\"modal\"> <i class=\"fa fa-trash\"></i></button></div>\n" +
                             "</td></tr>"
