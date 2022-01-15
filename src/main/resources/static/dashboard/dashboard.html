@@ -296,25 +296,32 @@
                 getExpense(function (result) {
                     var totalExpenses = 0;
                     var yearlyExpenses = 0;
+                    var monthlyExpenses = 0;
+                    var weeklyExpenses = 0;
+
                     $.each(result, function (i, item) {
                         totalExpenses += item.amount;
 
-                        var tempDate = new Date(item.expenseDate);
+                        var expenseDate = new Date(item.expenseDate);
                         
                         // Yearly
                         var tempDateYearly = new Date();
                         tempDateYearly.setDate(tempDateYearly.getDate()-365);
-                        alert("yearly:" + tempDateYearly);
+                        
                         // Monthly
                         var tempDateMonthly = new Date();
                         tempDateMonthly.setDate(tempDateMonthly.getDate()-30);
-                        alert("monthly:" + tempDateMonthly);
+                        
                         // Weekly
                         var tempDateWeekly = new Date();
                         tempDateWeekly.setDate(tempDateWeekly.getDate()-7);
-                        alert("weekly:" + tempDateWeekly);
+                        
+                        if(expenseDate >= tempDateWeekly) {
+                            weeklyExpenses += item.amount;
+                        }
                     });
                     $('#expenseTotal').text("CHF " + totalExpenses);
+                    $('#expenseMonthly').text("CHF " + weeklyExpenses);
                 });
             }
         });
