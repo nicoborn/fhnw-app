@@ -121,9 +121,6 @@
             }
 
             $("#form").submit(function (event) {
-                var dateNot = $('input[name=expenseDate]').val();
-                alert(dateNot);
-                alert(getExpenseJSON(null, $('input[name=name]').val(), $('input[name=description]').val(), $('input[name=amount]').val(), $('input[name=expenseDate]').val(), $('.form-select').val(), selectedTextPick));
                 postExpense(getExpenseJSON(null, $('input[name=name]').val(), $('input[name=description]').val(), $('input[name=amount]').val(), $('input[name=expenseDate]').val(), $('.form-select').val(), selectedTextPick), function (result) {
                     window.location.replace("/expense");
                 }, function (error) {
