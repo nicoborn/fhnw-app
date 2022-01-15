@@ -106,7 +106,7 @@ function getExpenseJSON(id, name, description, amount, expensedate, categoryId, 
             "name": name,
             "description": description,
             "amount": amount,
-            "expensedate": expensedate,
+            "expenseDate": expensedate,
             "category": {"id": categoryId, "name": categoryName}
         });
     }
@@ -115,7 +115,7 @@ function getExpenseJSON(id, name, description, amount, expensedate, categoryId, 
         "name": name,
         "description": description,
         "amount": amount,
-        "expensedate": expensedate,
+        "expenseDate": expensedate,
         "category": {"id": categoryId, "name": categoryName}
     });
 }
