@@ -70,7 +70,7 @@
                                     <div class="row align-items-center no-gutters">
                                         <div class="col me-2">
                                             <div class="text-uppercase text-primary fw-bold text-xs mb-1"><span>Expenses (total)</span></div>
-                                            <div class="text-dark fw-bold h5 mb-0"><span id="expenseYearly">$40,000</span></div>
+                                            <div class="text-dark fw-bold h5 mb-0"><span id="expenseTotal"></span></div>
                                         </div>
                                         <div class="col-auto"><i class="fas fa-calendar fa-2x text-gray-300"></i></div>
                                     </div>
@@ -83,7 +83,7 @@
                                     <div class="row align-items-center no-gutters">
                                         <div class="col me-2">
                                             <div class="text-uppercase text-success fw-bold text-xs mb-1"><span>Expenses (yearly)</span></div>
-                                            <div class="text-dark fw-bold h5 mb-0"><span>$215,000</span></div>
+                                            <div class="text-dark fw-bold h5 mb-0"><span id="expenseYearly">$215,000</span></div>
                                         </div>
                                         <div class="col-auto"><i class="fas fa-dollar-sign fa-2x text-gray-300"></i></div>
                                     </div>
@@ -295,10 +295,26 @@
             function loadData() {
                 getExpense(function (result) {
                     var totalExpenses = 0;
+                    var yearlyExpenses = 0;
                     $.each(result, function (i, item) {
                         totalExpenses += item.amount;
+
+                        var tempDate = new Date(item.expenseDate);
+                        
+                        // Yearly
+                        var tempDateYearly = new Date();
+                        tempDateYearly.setDate(tempDateYearly.getDate()-365);
+                        alert("yearly:" + tempDateYearly);
+                        // Monthly
+                        var tempDateMonthly = new Date();
+                        tempDateMonthly.setDate(tempDateMonthly.getDate()-30);
+                        alert("monthly:" + tempDateMonthly);
+                        // Weekly
+                        var tempDateWeekly = new Date();
+                        tempDateWeekly.setDate(tempDateWeekly.getDate()-7);
+                        alert("weekly:" + tempDateWeekly);
                     });
-                    $('#expenseYearly').text("CHF " + totalExpenses);
+                    $('#expenseTotal').text("CHF " + totalExpenses);
                 });
             }
         });
