@@ -144,8 +144,7 @@
                     $.each(result, function (i, item) {
 
                         // date convert
-                        var today = new Date();
-                        today = item.expenseDate;
+                        var today = new Date(item.expenseDate);
                         var dd = String(today.getDate()).padStart(2, '0');
                         var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
                         var yyyy = today.getFullYear();
