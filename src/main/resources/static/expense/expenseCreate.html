@@ -65,7 +65,7 @@
                                     <div class="input-group"><span class="input-group-text">Description </span><input class="form-control" type="text" name="description"></div>
                                 </div>
                                 <div class="form-group mb-3">
-                                    <div class="input-group"><span class="input-group-text">Date </span><input class="form-control" type="date" name="expensedate"/></div>
+                                    <div class="input-group"><span class="input-group-text">Date </span><input class="form-control" type="date" name="expenseDate"/></div>
                                 </div>
                                 <div class="form-group mb-3">
                                     <div class="input-group"><span class="input-group-text">Amount </span><input class="form-control" type="text" name="amount"></div>
@@ -121,7 +121,9 @@
             }
 
             $("#form").submit(function (event) {
-                postExpense(getExpenseJSON(null, $('input[name=name]').val(), $('input[name=description]').val(), $('input[name=amount]').val(), $('.form-select').val(), selectedTextPick), function (result) {
+                var dateNot = $('input[name=expenseDate]').val();
+                alert(dateNot);
+                postExpense(getExpenseJSON(null, $('input[name=name]').val(), $('input[name=description]').val(), $('input[name=amount]').val(), $('input[name=expenseDate]').val(), $('.form-select').val(), selectedTextPick), function (result) {
                     window.location.replace("/expense");
                 }, function (error) {
                     $("#error-modal").modal('show');
