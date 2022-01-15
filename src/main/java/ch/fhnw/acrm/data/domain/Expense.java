@@ -18,6 +18,7 @@ public class Expense {
 	private String name;
 	private String description;
 	private Double amount;
+	@Column(columnDefinition = "DATE")
 	private LocalDate expensedate;
 	@ManyToOne
 	@JsonIgnore
