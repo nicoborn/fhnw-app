@@ -292,6 +292,7 @@
             $(loadData());
 
             function loadData() {
+                console.log("loadData();");
                 getExpense(function (result) {
                     var totalExpenses = 0;
                     $.each(result, function (i, item) {
