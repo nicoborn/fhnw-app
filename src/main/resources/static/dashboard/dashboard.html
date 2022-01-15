@@ -298,8 +298,7 @@
                     $.each(result, function (i, item) {
                         totalExpenses += item.amount;
                     });
-                    $('#expenseYearly').text(totalExpenses);
-                    alert(totalExpenses);
+                    $('#expenseYearly').text("CHF " + totalExpenses);
                 });
             }
         });
