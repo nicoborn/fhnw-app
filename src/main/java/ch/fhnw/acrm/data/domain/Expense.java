@@ -20,7 +20,7 @@ public class Expense {
 	private String description;
 	private Double amount;
 	@Column(columnDefinition = "DATE")
-	private LocalDate expensedate;
+	private LocalDate expenseDate;
 	@ManyToOne
 	@JsonIgnore
 	private Agent agent;
@@ -60,11 +60,11 @@ public class Expense {
 	}
 
 	public LocalDate getExpenseDate() {
-		return expensedate;
+		return expenseDate;
 	}
 
-	public void setExpenseDate(LocalDate expensedate) {
-		this.expensedate = expensedate;
+	public void setExpenseDate(LocalDate expenseDate) {
+		this.expenseDate = expenseDate;
 	}
 	
 	public Agent getAgent() {
