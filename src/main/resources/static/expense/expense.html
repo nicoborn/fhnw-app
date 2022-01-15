@@ -148,7 +148,7 @@
                         var dd = String(convertedDate.getDate()).padStart(2, '0');
                         var mm = String(convertedDate.getMonth() + 1).padStart(2, '0');
                         var yyyy = convertedDate.getFullYear();
-                        convertedDate = mm + '.' + dd + '.' + yyyy;
+                        convertedDate = dd + '.' + mm + '.' + yyyy;
                         
                         $("#tableData").append($("<tr>").append($("<td>").text(item.id)).append($("<td>").text(convertedDate)).append($("<td>").text(item.name)).append($("<td>").text(item.description)).append($("<td>").text("CHF " + item.amount)).append($("<td>").text(item.category["name"])).append($(
                             "<td>\n" +
