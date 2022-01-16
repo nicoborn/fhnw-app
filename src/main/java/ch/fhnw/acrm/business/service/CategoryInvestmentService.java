@@ -32,7 +32,7 @@ public class CategoryInvestmentService {
 
 	public List<CategoryInvestment> findAllCategories() {
 
-		return categoryInvestmentRepository.findAll().toList();
+		return toList(categoryInvestmentRepository.findAll());
 	}
 
 	public static <T> List<T> toList(Optional<T> opt) {
