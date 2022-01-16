@@ -30,7 +30,7 @@ public class CategoryInvestmentService {
 	}
 
 	public List<CategoryInvestment> findAllCategories() {
-		return categoryRepository.findByAgentId(agentService.getCurrentAgent().getId());
+		return categoryInvestmentRepository.findAll();
 	}
 	
 }

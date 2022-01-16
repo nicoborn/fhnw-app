@@ -16,4 +16,5 @@ import java.util.List;
 public interface CategoryInvestmentRepository extends JpaRepository<CategoryInvestment, Long> {
 	CategoryInvestment findByName(String name);
 	List<CategoryInvestment> findById(Long categoryInvestmentId);
+	List<CategoryInvestment> findAll();
 }
