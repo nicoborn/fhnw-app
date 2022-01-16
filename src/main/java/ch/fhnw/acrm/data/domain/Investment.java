@@ -15,7 +15,8 @@ public class Option {
 	@GeneratedValue
 	private Long id;
 	private String name;
-	private Int 
+	@Column(columnDefinition = "DATE")
+	private LocalDate investmentDate;
     @ManyToOne
 	@JsonIgnore
 	private Agent agent;
@@ -33,6 +34,18 @@ public class Option {
 
 	public String getName() {
 		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public LocalDate getInvestmentDate() {
+		return investmentDate;
+	}
+
+	public void setInvestmentDate(LocalDate investmentDate) {
+		this.investmentDate = investmentDate;
 	}
 
     public Agent getAgent() {
