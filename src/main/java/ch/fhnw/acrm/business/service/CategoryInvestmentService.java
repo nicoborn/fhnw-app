@@ -22,7 +22,7 @@ public class CategoryInvestmentService {
 	private CategoryInvestmentRepository categoryInvestmentRepository;
 
 	public CategoryInvestment findCategoryInvestmentById(Long categoryInvestmentId) throws Exception {
-		List<CategoryInvestment> categoryList = categoryInvestmentRepository.findByIdId(categoryInvestmentId);
+		List<CategoryInvestment> categoryList = categoryInvestmentRepository.findById(categoryInvestmentId);
 		if(categoryList.isEmpty()){
 			throw new Exception("No categoryinvestment with ID "+ categoryInvestmentId +" found.");
 		}
