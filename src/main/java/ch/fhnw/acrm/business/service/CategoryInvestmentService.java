@@ -30,7 +30,14 @@ public class CategoryInvestmentService {
 	}
 
 	public List<CategoryInvestment> findAllCategories() {
-		return categoryInvestmentRepository.findAll();
+
+		return categoryInvestmentRepository.findAll().toList();
+	}
+
+	public static <T> List<T> toList(Optional<T> opt) {
+    return opt
+            .map(Collections::singletonList)
+            .orElseGet(Collections::emptyList);
 	}
 	
 }
