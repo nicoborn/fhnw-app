@@ -154,7 +154,7 @@
             $(loadData());
 
             function loadData() {
-                getCategory(function (result) {
+                getInvestments(function (result) {
                     $("#tableData").empty();
                     $.each(result, function (i, item) {
                         // date convert
