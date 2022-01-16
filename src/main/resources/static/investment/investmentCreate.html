@@ -115,7 +115,7 @@
 
             $("#form").submit(function (event) {
                 postInvestment(getInvestmentJSON(null, $('input[name=name]').val(), $('input[name=amount]').val(), $('input[name=buyprice]').val(), $('input[name=investmentDate]').val(), $('.form-select').val()), function (result) {
-                    window.location.replace("/expense");
+                    window.location.replace("/investment");
                 }, function (error) {
                     $("#error-modal").modal('show');
                     $("#error-text").text(error);
