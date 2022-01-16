@@ -52,10 +52,10 @@
                     </div>
                 </nav>
                 <div class="container-fluid">
-                    <h3 class="text-dark mb-4">My Investments</h3>
+                    <h3 class="text-dark mb-4">My Crypto Investments</h3>
                     <div class="card shadow">
                         <div class="card-header py-3">
-                            <p class="text-primary m-0 fw-bold">Expense categories</p>
+                            <p class="text-primary m-0 fw-bold">Investment records</p>
                         </div>
                         <div class="card-body">
                             <div class="row">
@@ -166,7 +166,7 @@
                         var yyyy = convertedDate.getFullYear();
                         convertedDate = dd + '.' + mm + '.' + yyyy;
                         console.log(JSON.stringify(item));
-                        $("#tableData").append($("<tr>").append($("<td>").text(item.id)).append($("<td>").text(convertedDate)).append($("<td>").text(item.categoryInvestment["name"])).append($("<td>").text(item.name)).append($("<td>").text(item.amount)).append($("<td>").text("CHF " + item.buyprice)).append($(
+                        $("#tableData").append($("<tr>").append($("<td>").text(item.id)).append($("<td>").text(convertedDate)).append($("<td>").text(item.categoryInvestment["name"])).append($("<td>").text(item.name)).append($("<td>").text(item.amount)).append($("<td>").text(item.buyprice)).append($(
                             "<td>\n" +
                             "<div class=\"btn-group btn-group-sm\" role=\"group\"><a class=\"btn btn-light\" role=\"button\" href=\"/expense/edit?id=" + item.id + "\"> <i class=\"fa fa-edit\"></i></a><button class=\"btn btn-light\" data-id=\"" + item.id + "\" type=\"button\" data-bs-target=\"#confirm-modal\" data-bs-toggle=\"modal\"> <i class=\"fa fa-trash\"></i></button></div>\n" +
                             "</td></tr>"
