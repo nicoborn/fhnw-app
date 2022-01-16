@@ -112,11 +112,15 @@
                 console.log(selectedText);
             });
 
-            alert(selectedTextPick);
-            var buypr = $('input[name=buyprice]').val();
-            alert(buypr);
 
             $("#form").submit(function (event) {
+
+                alert(selectedTextPick);
+                var buypr = $('input[name=buyprice]').val();
+                alert(buypr);
+                var ddd = $('input[name=investmentDate]').val();
+                alert(ddd);
+
                 postInvestment(getExpenseJSON(null, $('input[name=name]').val(), $('input[name=amount]').val(), $('input[name=buyprice]').val(), $('input[name=investmentDate]').val(), selectedTextPick), function (result) {
                     window.location.replace("/expense");
                 }, function (error) {
