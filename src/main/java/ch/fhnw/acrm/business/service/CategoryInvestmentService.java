@@ -13,7 +13,6 @@ import ch.fhnw.acrm.data.repository.CategoryInvestmentRepository;
 
 import javax.validation.Valid;
 import java.util.List;
-import java.util.Optional;
 
 @Service
 @Validated
@@ -31,14 +30,9 @@ public class CategoryInvestmentService {
 	}
 
 	public List<CategoryInvestment> findAllCategories() {
-
-		return toList(categoryInvestmentRepository.findAll());
-	}
-
-	public static <T> List<T> toList(Optional<T> opt) {
-    return opt
-            .map(Collections::singletonList)
-            .orElseGet(Collections::emptyList);
+		List<CategoryInvestment> cat = new ArrayList<>();
+		categoryInvestmentRepository.findAll().forEach(cat::add);
+		return cat;
 	}
 	
 }
