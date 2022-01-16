@@ -5,7 +5,7 @@
 
 package ch.fhnw.acrm.data.repository;
 
-import ch.fhnw.acrm.data.domain.Expense;
+import ch.fhnw.acrm.data.domain.Investment;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
@@ -13,9 +13,9 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface ExpenseRepository extends JpaRepository<Expense, Long> {
-	Expense findByName(String name);
-	Expense findByDescription(String description);
-	List<Expense> findByAgentId(Long agentId);
-	List<Expense> findByIdAndAgentId(Long expenseId, Long agentId);
+public interface InvestmentRepository extends JpaRepository<Investment, Long> {
+	Investment findByName(String name);
+	Investment findByDescription(String description);
+	List<Investment> findByAgentId(Long agentId);
+	List<Investment> findByIdAndAgentId(Long investmentId, Long agentId);
 }
