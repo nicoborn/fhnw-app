@@ -81,13 +81,4 @@ public class Investment {
 	public void setAgent(Agent agent) {
 		this.agent = agent;
 	}
-
-	public CategoryInvestment getCategoryInvestment() {
-		return categoryinvestment;
-	}
-
-	public void setCategoryInvestment(CategoryInvestment categoryinvestment) {
-		this.categoryinvestment = categoryinvestment;
-	}
-
 }
