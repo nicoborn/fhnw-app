@@ -316,7 +316,7 @@ function getInvestmentJSON(id, name, amount, buyprice, investmentdate, symbol) {
         return JSON.stringify({
             "name": name,
             "amount": amount,
-            "amount": buyprice,
+            "buyprice": buyprice,
             "investmentDate": investmentdate,
             "symbol": symbol
         });
@@ -325,7 +325,7 @@ function getInvestmentJSON(id, name, amount, buyprice, investmentdate, symbol) {
         "id": id,
         "name": name,
         "amount": amount,
-        "amount": buyprice,
+        "buyprice": buyprice,
         "investmentDate": investmentdate,
         "symbol": symbol
     });
