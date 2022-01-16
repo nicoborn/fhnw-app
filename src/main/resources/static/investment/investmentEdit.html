@@ -112,14 +112,14 @@
 
             investmentID = getURLParameter('id');
             if (investmentID !== null) {
-                getExpenses(investmentID, function (result) {
+                getInvestment(investmentID, function (result) {
                     $('input[name=id]').val(result["id"]);
                     $('input[name=name]').val(result["name"]);
                     $('input[name=symbol]').val(result["symbol"]);
                     $('input[name=amount]').val(result["amount"]);
                     $('input[name=buyprice]').val(result["buyprice"]);
                     $('input[name=investmentDate]').val(result["investmentDate"]);
-
+                    /*
                     var savedCategoryId = result["category"]["id"];
                     $("#dropdown-boot").append($("<option value=\"" + result["category"]["id"] + "\" selected> " + result["category"]["name"] + "</option>"));
 
@@ -129,7 +129,7 @@
                                 $("#dropdown-boot").append($("<option value=\"" + item.id + "\"> " + item.name + "</option>"));
                             }
                         });
-                    });
+                    });*/
                 });
             }
             $("#form").submit(function (event) {
