@@ -10,11 +10,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping(path = "/investment")
+@RequestMapping(path = "/dashboard")
 public class DashboardController {
 
     @GetMapping
     public String getDashboardView(){
-        return "investment/investment.html";
+        return "dashboard/dashboard.html";
     }
 }
