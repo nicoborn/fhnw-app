@@ -132,10 +132,10 @@
         <div class="modal-dialog modal-sm" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4>Deletion of a <strong>category</strong>.</h4><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h4>Deletion of an <strong>investment</strong>.</h4><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p>Do you want to delete a category?</p>
+                    <p>Do you want to delete an investment?</p>
                 </div>
                 <div class="modal-footer"><button class="btn btn-light" type="button" data-bs-dismiss="modal">Cancel </button><button class="btn btn-primary" id="deleteData" data-id="#" type="button">Delete </button></div>
             </div>
@@ -164,7 +164,7 @@
                         var yyyy = convertedDate.getFullYear();
                         convertedDate = dd + '.' + mm + '.' + yyyy;
                         console.log(JSON.stringify(item));
-                        $("#tableData").append($("<tr>").append($("<td>").text(item.id)).append($("<td>").text(convertedDate)).append($("<td>").text(item.name)).append($("<td>").text("CHF " + item.amount)).append($("<td>").text(item.category["categoryName"])).append($(
+                        $("#tableData").append($("<tr>").append($("<td>").text(item.id)).append($("<td>").text(convertedDate)).append($("<td>").text(item.name)).append($("<td>").text("CHF " + item.amount)).append($("<td>").text(item.categoryInvestment["name"])).append($(
                             "<td>\n" +
                             "<div class=\"btn-group btn-group-sm\" role=\"group\"><a class=\"btn btn-light\" role=\"button\" href=\"/expense/edit?id=" + item.id + "\"> <i class=\"fa fa-edit\"></i></a><button class=\"btn btn-light\" data-id=\"" + item.id + "\" type=\"button\" data-bs-target=\"#confirm-modal\" data-bs-toggle=\"modal\"> <i class=\"fa fa-trash\"></i></button></div>\n" +
                             "</td></tr>"
