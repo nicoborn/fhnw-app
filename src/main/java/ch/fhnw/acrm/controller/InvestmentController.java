@@ -17,4 +17,14 @@ public class InvestmentController {
     public String getInvestmentView(){
         return "investment/investment.html";
     }
+
+    @GetMapping("/create")
+    public String getInvestmentCreateView(){
+        return "../investment/investmentCreate.html";
+    }
+
+    @GetMapping("/edit")
+    public String getInvestmentEditView(){
+        return "../investment/investmentEdit.html";
+    }
 }
