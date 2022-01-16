@@ -13,6 +13,6 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface CategoryInvestmentRepository extends JpaRepository<Category, Long> {
+public interface CategoryInvestmentRepository extends JpaRepository<CategoryInvestment, Long> {
 	CategoryInvestment findByName(String name);
 }
