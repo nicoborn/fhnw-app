@@ -15,7 +15,6 @@ import java.util.List;
 @Repository
 public interface InvestmentRepository extends JpaRepository<Investment, Long> {
 	Investment findByName(String name);
-	Investment findByDescription(String description);
 	List<Investment> findByAgentId(Long agentId);
 	List<Investment> findByIdAndAgentId(Long investmentId, Long agentId);
 }
