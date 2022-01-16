@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>ExpenseTracker - My Investments</title>
+    <title>ExpenseTracker - My Crypto Investments</title>
     <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -81,9 +81,9 @@
                                         <tr>
                                             <th>ID</th>
                                             <th>Date</th>
+                                            <th>Symbol</th>
                                             <th>Name</th>
                                             <th>Amount</th>
-                                            <th>Category</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -92,9 +92,9 @@
                                         <tr>
                                             <th>ID</th>
                                             <th>Date</th>
+                                            <th>Symbol</th>
                                             <th>Name</th>
                                             <th>Amount</th>
-                                            <th>Category</th>
                                             <th></th>
                                         </tr>
                                     </tfoot>
@@ -164,7 +164,7 @@
                         var yyyy = convertedDate.getFullYear();
                         convertedDate = dd + '.' + mm + '.' + yyyy;
                         console.log(JSON.stringify(item));
-                        $("#tableData").append($("<tr>").append($("<td>").text(item.id)).append($("<td>").text(convertedDate)).append($("<td>").text(item.name)).append($("<td>").text("CHF " + item.amount)).append($("<td>").text(item.categoryInvestment["name"])).append($(
+                        $("#tableData").append($("<tr>").append($("<td>").text(item.id)).append($("<td>").text(convertedDate)).append($("<td>").text(item.categoryInvestment["name"])).append($("<td>").text(item.name)).append($("<td>").text("CHF " + item.amount)).append($(
                             "<td>\n" +
                             "<div class=\"btn-group btn-group-sm\" role=\"group\"><a class=\"btn btn-light\" role=\"button\" href=\"/expense/edit?id=" + item.id + "\"> <i class=\"fa fa-edit\"></i></a><button class=\"btn btn-light\" data-id=\"" + item.id + "\" type=\"button\" data-bs-target=\"#confirm-modal\" data-bs-toggle=\"modal\"> <i class=\"fa fa-trash\"></i></button></div>\n" +
                             "</td></tr>"
