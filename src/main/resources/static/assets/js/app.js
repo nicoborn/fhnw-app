@@ -366,7 +366,7 @@ function putInvestment(investmentID, investment, callbackSuccess, callbackError)
 }
 
 
-function getInvestment(callback) {
+function getInvestments(callback) {
     $.ajax({
         type: "GET",
         dataType: "json",
@@ -380,7 +380,7 @@ function getInvestment(callback) {
     });
 }
 
-function getInvestments(investmentID, callback) {
+function getInvestment(investmentID, callback) {
     $.ajax({
         type: "GET",
         dataType: "json",
