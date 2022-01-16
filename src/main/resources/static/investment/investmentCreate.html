@@ -113,7 +113,7 @@
             });
 
             $("#form").submit(function (event) {
-                postExpense(getExpenseJSON(null, $('input[name=name]').val(), $('input[name=amount]').val(), $('input[name=buyprice]').val(), $('input[name=investmentDate]').val(), selectedTextPick), function (result) {
+                postInvestment(getExpenseJSON(null, $('input[name=name]').val(), $('input[name=amount]').val(), $('input[name=buyprice]').val(), $('input[name=investmentDate]').val(), selectedTextPick), function (result) {
                     window.location.replace("/expense");
                 }, function (error) {
                     $("#error-modal").modal('show');
