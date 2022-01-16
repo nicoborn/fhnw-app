@@ -305,3 +305,112 @@ function postCategory(category, callbackSuccess, callbackError) {
         }
     });
 }
+
+
+
+/* INVESTMENT */
+
+function getInvestmentJSON(id, name, amount, investmentdate, categoryId, categoryName) {
+
+    if (id === null) {
+        return JSON.stringify({
+            "name": name,
+            "amount": amount,
+            "investmentDate": investmentdate,
+            "category": {"id": categoryId, "name": categoryName}
+        });
+    }
+    return JSON.stringify({
+        "id": id,
+        "name": name,
+        "amount": amount,
+        "investmentDate": investmentdate,
+        "category": {"id": categoryId, "name": categoryName}
+    });
+}
+
+function deleteInvestment(investmentID, callback) {
+    $.ajax({
+        type: "DELETE",
+        headers: {
+            "X-XSRF-TOKEN": getCookie("XSRF-TOKEN")
+        },
+        url: serviceEndpointURL + "/api/investment/" + investmentID,
+        success: function (data) {
+            callback(data);
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+            console.log(jqXHR, textStatus, errorThrown);
+        }
+    });
+}
+
+
+function putInvestment(investmentID, investment, callbackSuccess, callbackError) {
+    $.ajax({
+        type: "PUT",
+        contentType: "application/json",
+        headers: {
+            "X-XSRF-TOKEN": getCookie("XSRF-TOKEN")
+        },
+        url: serviceEndpointURL + "/api/investment/" + investmentID,
+        data: investment,
+        success: function (data) {
+            callbackSuccess(data);
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+            console.log(jqXHR, textStatus, errorThrown);
+            callbackError(jqXHR.responseJSON.message);
+        }
+    });
+}
+
+
+function getInvestment(callback) {
+    $.ajax({
+        type: "GET",
+        dataType: "json",
+        url: serviceEndpointURL + "/api/investment",
+        success: function (data) {
+            callback(data);
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+            console.log(jqXHR, textStatus, errorThrown);
+        }
+    });
+}
+
+function getInvestments(investmentID, callback) {
+    $.ajax({
+        type: "GET",
+        dataType: "json",
+        url: serviceEndpointURL + "/api/investment/" + investmentID,
+        success: function (data) {
+            callback(data);
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+            console.log(jqXHR, textStatus, errorThrown);
+        }
+    });
+}
+
+
+function postInvestment(investment, callbackSuccess, callbackError) {
+    $.ajax({
+        type: "POST",
+        contentType: "application/json",
+        headers: {
+            "X-XSRF-TOKEN": getCookie("XSRF-TOKEN")
+        },
+        url: serviceEndpointURL + "/api/investment",
+        data: investment,
+        success: function (data) {
+            callbackSuccess(data);
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+            console.log(jqXHR, textStatus, errorThrown);
+            callbackError(jqXHR.responseJSON.message);
+        }
+    });
+}
+

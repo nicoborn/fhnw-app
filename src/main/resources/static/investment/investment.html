@@ -80,7 +80,10 @@
                                     <thead>
                                         <tr>
                                             <th>ID</th>
+                                            <th>Date</th>
                                             <th>Name</th>
+                                            <th>Amount</th>
+                                            <th>Category</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -88,7 +91,10 @@
                                     <tfoot>
                                         <tr>
                                             <th>ID</th>
+                                            <th>Date</th>
                                             <th>Name</th>
+                                            <th>Amount</th>
+                                            <th>Category</th>
                                             <th></th>
                                         </tr>
                                     </tfoot>
@@ -151,9 +157,16 @@
                 getCategory(function (result) {
                     $("#tableData").empty();
                     $.each(result, function (i, item) {
-                        $("#tableData").append($("<tr>").append($("<td>").text(item.id)).append($("<td>").text(item.name)).append($(
+                        // date convert
+                        var convertedDate = new Date(item.investmentDate);
+                        var dd = String(convertedDate.getDate()).padStart(2, '0');
+                        var mm = String(convertedDate.getMonth() + 1).padStart(2, '0');
+                        var yyyy = convertedDate.getFullYear();
+                        convertedDate = dd + '.' + mm + '.' + yyyy;
+                        
+                        $("#tableData").append($("<tr>").append($("<td>").text(item.id)).append($("<td>").text(convertedDate)).append($("<td>").text(item.name)).append($("<td>").text("CHF " + item.amount)).append($("<td>").text(item.category["name"])).append($(
                             "<td>\n" +
-                            "<div class=\"btn-group btn-group-sm\" role=\"group\"><a class=\"btn btn-light\" role=\"button\" href=\"/category/edit?id=" + item.id + "\"> <i class=\"fa fa-edit\"></i></a><button class=\"btn btn-light\" data-id=\"" + item.id + "\" type=\"button\" data-bs-target=\"#confirm-modal\" data-bs-toggle=\"modal\"> <i class=\"fa fa-trash\"></i></button></div>\n" +
+                            "<div class=\"btn-group btn-group-sm\" role=\"group\"><a class=\"btn btn-light\" role=\"button\" href=\"/expense/edit?id=" + item.id + "\"> <i class=\"fa fa-edit\"></i></a><button class=\"btn btn-light\" data-id=\"" + item.id + "\" type=\"button\" data-bs-target=\"#confirm-modal\" data-bs-toggle=\"modal\"> <i class=\"fa fa-trash\"></i></button></div>\n" +
                             "</td></tr>"
                         )));
                     });
