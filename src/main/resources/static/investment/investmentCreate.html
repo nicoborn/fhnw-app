@@ -114,20 +114,12 @@
 
 
             $("#form").submit(function (event) {
-
-                alert(selectedTextPick);
-                var buypr = $('input[name=buyprice]').val();
-                alert("buypr:" + buypr);
-                var ddd = $('input[name=investmentDate]').val();
-                alert("date:" + ddd);
-                var testjson = getInvestmentJSON(null, $('input[name=name]').val(), $('input[name=amount]').val(), $('input[name=buyprice]').val(), $('input[name=investmentDate]').val(), $('.form-select').val());
-                alert(testjson);
-                /*postInvestment(getInvestmentJSON(null, $('input[name=name]').val(), $('input[name=amount]').val(), $('input[name=buyprice]').val(), $('input[name=investmentDate]').val(), selectedTextPick), function (result) {
+                postInvestment(getInvestmentJSON(null, $('input[name=name]').val(), $('input[name=amount]').val(), $('input[name=buyprice]').val(), $('input[name=investmentDate]').val(), $('.form-select').val()), function (result) {
                     window.location.replace("/expense");
                 }, function (error) {
                     $("#error-modal").modal('show');
                     $("#error-text").text(error);
-                });*/
+                });
                 event.preventDefault();
             });
         });        
