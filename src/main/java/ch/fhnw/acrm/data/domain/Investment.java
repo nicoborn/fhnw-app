@@ -19,15 +19,13 @@ public class Investment {
 	private String name;
 	private Double amount;
 	private Double buyprice;
+	private String symbol;
 	@Column(columnDefinition = "DATE")
 	private LocalDate investmentDate;
     @ManyToOne
 	@JsonIgnore
 	private Agent agent;
-	@ManyToOne
-	private CategoryInvestment categoryinvestment;
-
-
+	
 	public Long getId() {
 		return id;
 	}
@@ -58,6 +56,14 @@ public class Investment {
 
 	public void setBuyprice(Double buyprice) {
 		this.buyprice = buyprice;
+	}
+
+	public String getSymbol() {
+		return symbol;
+	}
+
+	public void setSymbol(String symbol) {
+		this.symbol = symbol;
 	}
 
 	public LocalDate getInvestmentDate() {
