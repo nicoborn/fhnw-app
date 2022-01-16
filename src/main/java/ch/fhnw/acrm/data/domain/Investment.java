@@ -17,6 +17,7 @@ public class Investment {
 	@GeneratedValue
 	private Long id;
 	private String name;
+	private Double amount;
 	@Column(columnDefinition = "DATE")
 	private LocalDate investmentDate;
     @ManyToOne
@@ -40,6 +41,14 @@ public class Investment {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public Double getAmount() {
+		return amount;
+	}
+
+	public void setAmount(Double amount) {
+		this.amount = amount;
 	}
 
 	public LocalDate getInvestmentDate() {
