@@ -11,8 +11,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
-import ch.fhnw.acrm.business.service.CategoryService;
-import ch.fhnw.acrm.data.domain.Category;
+import ch.fhnw.acrm.business.service.CategoryInvestmentService;
+import ch.fhnw.acrm.data.domain.CategoryInvestment;
 
 import javax.validation.ConstraintViolationException;
 import java.net.URI;

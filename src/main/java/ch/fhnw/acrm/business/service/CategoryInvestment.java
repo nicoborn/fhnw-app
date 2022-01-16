@@ -29,7 +29,7 @@ public class CategoryInvestmentService {
 		return categoryList.get(0);
 	}
 
-	public List<Category> findAllCategories() {
+	public List<CategoryInvestment> findAllCategories() {
 		return categoryRepository.findByAgentId(agentService.getCurrentAgent().getId());
 	}
 	
