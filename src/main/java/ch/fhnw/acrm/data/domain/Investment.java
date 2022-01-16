@@ -18,6 +18,7 @@ public class Investment {
 	private Long id;
 	private String name;
 	private Double amount;
+	private Double buyprice;
 	@Column(columnDefinition = "DATE")
 	private LocalDate investmentDate;
     @ManyToOne
@@ -49,6 +50,14 @@ public class Investment {
 
 	public void setAmount(Double amount) {
 		this.amount = amount;
+	}
+
+	public Double getBuyprice() {
+		return buyprice;
+	}
+
+	public void setBuyprice(Double buyprice) {
+		this.buyprice = buyprice;
 	}
 
 	public LocalDate getInvestmentDate() {

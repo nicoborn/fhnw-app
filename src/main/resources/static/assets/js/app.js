@@ -310,12 +310,13 @@ function postCategory(category, callbackSuccess, callbackError) {
 
 /* INVESTMENT */
 
-function getInvestmentJSON(id, name, amount, investmentdate, categoryId, categoryName) {
+function getInvestmentJSON(id, name, amount, buyprice, investmentdate, categoryId, categoryName) {
 
     if (id === null) {
         return JSON.stringify({
             "name": name,
             "amount": amount,
+            "amount": buyprice,
             "investmentDate": investmentdate,
             "category": {"id": categoryId, "name": categoryName}
         });
@@ -324,6 +325,7 @@ function getInvestmentJSON(id, name, amount, investmentdate, categoryId, categor
         "id": id,
         "name": name,
         "amount": amount,
+        "amount": buyprice,
         "investmentDate": investmentdate,
         "category": {"id": categoryId, "name": categoryName}
     });

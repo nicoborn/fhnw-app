@@ -84,6 +84,7 @@
                                             <th>Symbol</th>
                                             <th>Name</th>
                                             <th>Amount</th>
+                                            <th>Buy price</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -95,6 +96,7 @@
                                             <th>Symbol</th>
                                             <th>Name</th>
                                             <th>Amount</th>
+                                            <th>Buy price</th>
                                             <th></th>
                                         </tr>
                                     </tfoot>
@@ -164,7 +166,7 @@
                         var yyyy = convertedDate.getFullYear();
                         convertedDate = dd + '.' + mm + '.' + yyyy;
                         console.log(JSON.stringify(item));
-                        $("#tableData").append($("<tr>").append($("<td>").text(item.id)).append($("<td>").text(convertedDate)).append($("<td>").text(item.categoryInvestment["name"])).append($("<td>").text(item.name)).append($("<td>").text("CHF " + item.amount)).append($(
+                        $("#tableData").append($("<tr>").append($("<td>").text(item.id)).append($("<td>").text(convertedDate)).append($("<td>").text(item.categoryInvestment["name"])).append($("<td>").text(item.name)).append($("<td>").text(item.amount)).append($("<td>").text("CHF " + item.buyprice)).append($(
                             "<td>\n" +
                             "<div class=\"btn-group btn-group-sm\" role=\"group\"><a class=\"btn btn-light\" role=\"button\" href=\"/expense/edit?id=" + item.id + "\"> <i class=\"fa fa-edit\"></i></a><button class=\"btn btn-light\" data-id=\"" + item.id + "\" type=\"button\" data-bs-target=\"#confirm-modal\" data-bs-toggle=\"modal\"> <i class=\"fa fa-trash\"></i></button></div>\n" +
                             "</td></tr>"
