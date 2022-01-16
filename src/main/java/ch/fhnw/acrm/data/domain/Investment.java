@@ -10,7 +10,7 @@ import javax.persistence.ManyToOne;
 import java.time.*;
 
 @Entity
-public class Option {
+public class Investment {
 
 	@Id
 	@GeneratedValue
