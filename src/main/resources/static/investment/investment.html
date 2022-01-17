@@ -156,7 +156,7 @@
     <script>
         $(document).ready(function () {
             $(loadData());
-
+            $(getPrice());
             function loadData() {
                 getInvestments(function (result) {
                     $("#tableData").empty();
@@ -179,6 +179,13 @@
                             "</td></tr>"
                         )));
                     });
+                });
+            }
+
+            function getPrice() {
+                $.getJSON('https://data.messari.io/api/v1/assets/btc/metrics', function(data) {
+                    // JSON result in `data` variable
+                    console.log(data);
                 });
             }
 
