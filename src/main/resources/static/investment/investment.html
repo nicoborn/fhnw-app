@@ -86,6 +86,8 @@
                                             <th>Amount</th>
                                             <th>Buy price</th>
                                             <th>Total price</th>
+                                            <th>Current price</th>
+                                            <th>Win / loss</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -99,6 +101,8 @@
                                             <th>Amount</th>
                                             <th>Buy price</th>
                                             <th>Total price</th>
+                                            <th>Current price</th>
+                                            <th>Win / loss</th>
                                             <th></th>
                                         </tr>
                                     </tfoot>
@@ -173,7 +177,7 @@
                         var totalBuyPrice = item.amount * item.buyprice;
                         var actualPrice = 0;
 
-                        $("#tableData").append($("<tr>").append($("<td>").text(item.id)).append($("<td>").text(convertedDate)).append($("<td>").text(item.symbol)).append($("<td>").text(item.name)).append($("<td>").text(item.amount)).append($("<td>").text(item.buyprice)).append($("<td>").text(totalBuyPrice)).append($(
+                        $("#tableData").append($("<tr>").append($("<td>").text(item.id)).append($("<td>").text(convertedDate)).append($("<td>").text(item.symbol)).append($("<td>").text(item.name)).append($("<td>").text(item.amount)).append($("<td>").text(item.buyprice)).append($("<td>").text(totalBuyPrice)).append($("<td>").text($(getPrice(item.symbol)))).append($(
                             "<td>\n" +
                             "<div class=\"btn-group btn-group-sm\" role=\"group\"><a class=\"btn btn-light\" role=\"button\" href=\"/investment/edit?id=" + item.id + "\"> <i class=\"fa fa-edit\"></i></a><button class=\"btn btn-light\" data-id=\"" + item.id + "\" type=\"button\" data-bs-target=\"#confirm-modal\" data-bs-toggle=\"modal\"> <i class=\"fa fa-trash\"></i></button></div>\n" +
                             "</td></tr>"
@@ -182,11 +186,9 @@
                 });
             }
 
-            function getPrice() {
-                $.getJSON('https://data.messari.io/api/v1/assets/btc/metrics', function(data) {
-                    // JSON result in `data` variable
-                    console.log(data);
-                    alert(data.market_data.price_usd);
+            function getPrice(symbol) {
+                $.getJSON('https://data.messari.io/api/v1/assets/' + symbol + '/metrics', function(data) {
+                    return data.data.market_data.price_usd;
                 });
             }
 
