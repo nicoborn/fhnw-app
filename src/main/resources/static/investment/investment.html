@@ -180,21 +180,14 @@
                         var actualPrice = 0.0;
 
                         $.getJSON('https://data.messari.io/api/v1/assets/' + symbol + '/metrics', function(data) {
-                            var test = data.data.market_data.price_usd;
-                            console.log('in variable: ' + test);
-                            console.log('in objekt: ' + data.data.market_data.price_usd);
-                            actualPrice = test;
-                            console.log('within method: ' + actualPrice);
+                            actualPrice = data.data.market_data.price_usd;
+                            
+                            $("#tableData").append($("<tr>").append($("<td>").text(item.id)).append($("<td>").text(convertedDate)).append($("<td>").text(item.symbol)).append($("<td>").text(item.name)).append($("<td>").text(item.amount)).append($("<td>").text(item.buyprice)).append($("<td>").text(totalBuyPrice)).append($("<td>").text(actualPrice)).append($(
+                                "<td>\n" +
+                                "<div class=\"btn-group btn-group-sm\" role=\"group\"><a class=\"btn btn-light\" role=\"button\" href=\"/investment/edit?id=" + item.id + "\"> <i class=\"fa fa-edit\"></i></a><button class=\"btn btn-light\" data-id=\"" + item.id + "\" type=\"button\" data-bs-target=\"#confirm-modal\" data-bs-toggle=\"modal\"> <i class=\"fa fa-trash\"></i></button></div>\n" +
+                                "</td></tr>"
+                            )));
                         });
-
-                        alert(actualPrice);
-                        console.log('actualPrice: ' + actualPrice);
-                        
-                        $("#tableData").append($("<tr>").append($("<td>").text(item.id)).append($("<td>").text(convertedDate)).append($("<td>").text(item.symbol)).append($("<td>").text(item.name)).append($("<td>").text(item.amount)).append($("<td>").text(item.buyprice)).append($("<td>").text(totalBuyPrice)).append($("<td>").text(actualPrice)).append($(
-                            "<td>\n" +
-                            "<div class=\"btn-group btn-group-sm\" role=\"group\"><a class=\"btn btn-light\" role=\"button\" href=\"/investment/edit?id=" + item.id + "\"> <i class=\"fa fa-edit\"></i></a><button class=\"btn btn-light\" data-id=\"" + item.id + "\" type=\"button\" data-bs-target=\"#confirm-modal\" data-bs-toggle=\"modal\"> <i class=\"fa fa-trash\"></i></button></div>\n" +
-                            "</td></tr>"
-                        )));
                     });
                 });
             }
