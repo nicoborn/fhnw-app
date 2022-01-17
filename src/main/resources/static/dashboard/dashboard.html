@@ -244,10 +244,10 @@
                             weeklyExpenses += item.amount;
                         }
                     });
-                    $('#expenseTotal').text("CHF " + totalExpenses);
-                    $('#expenseYearly').text("CHF " + yearlyExpenses);
-                    $('#expenseMonthly').text("CHF " + monthlyExpenses);
-                    $('#expenseWeekly').text("CHF " + weeklyExpenses);
+                    $('#expenseTotal').text("CHF " + totalExpenses.toFixed(2));
+                    $('#expenseYearly').text("CHF " + yearlyExpenses.toFixed(2));
+                    $('#expenseMonthly').text("CHF " + monthlyExpenses.toFixed(2));
+                    $('#expenseWeekly').text("CHF " + weeklyExpenses.toFixed(2));
                 });
 
                 getInvestments(function (result) {
@@ -259,7 +259,7 @@
                     $.each(result, function (i, item) {
                         totalInvestments += item.amount * item.buyprice;
 
-                        var investmentsDate = new Date(item.investmentsDate);
+                        var investmentsDate = new Date(item.investmentDate);
                         
                         // Yearly
                         var tempDateYearly = new Date();
@@ -282,10 +282,10 @@
                             weeklyInvestments += item.amount;
                         }
                     });
-                    $('#investmentsTotal').text("CHF " + totalInvestments);
-                    $('#investmentsYearly').text("CHF " + yearlyInvestments);
-                    $('#investmentsMonthly').text("CHF " + monthlyInvestments);
-                    $('#investmentsWeekly').text("CHF " + weeklyInvestments);
+                    $('#investmentsTotal').text("CHF " + totalInvestments.toFixed(2));
+                    $('#investmentsYearly').text("CHF " + yearlyInvestments.toFixed(2));
+                    $('#investmentsMonthly').text("CHF " + monthlyInvestments.toFixed(2));
+                    $('#investmentsWeekly').text("CHF " + weeklyInvestments.toFixed(2));
                 });
             }
         });
