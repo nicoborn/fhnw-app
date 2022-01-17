@@ -36,9 +36,6 @@
             <div id="content">
                 <nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top">
                     <div class="container-fluid"><button class="btn btn-link d-md-none rounded-circle me-3" id="sidebarToggleTop" type="button"><i class="fas fa-bars"></i></button>
-                        <form class="d-none d-sm-inline-block me-auto ms-md-3 my-2 my-md-0 mw-100 navbar-search">
-                            <div class="input-group"></div>
-                        </form>
                         <ul class="navbar-nav flex-nowrap ms-auto">
                             
                             
@@ -191,7 +188,7 @@
                             var totalValue = (totalBuyPrice * (actualPrice / item.buyprice)).toFixed(2);
 
                             // Print table
-                            $("#tableData").append($("<tr>").append($("<td>").text(item.id)).append($("<td>").text(convertedDate)).append($("<td>").text(item.symbol)).append($("<td>").text(item.name)).append($("<td>").text(item.amount)).append($("<td>").text('CHF ' + item.buyprice)).append($("<td>").text('CHF ' + totalBuyPrice)).append($("<td>").text('CHF ' + roundedPrice)).append($("<td>").text(percentageWinLoss + '%')).append($("<td>").text('CHF ' + totalValue)).append($(
+                            $("#tableData").append($("<tr>").append($("<td>").text(item.id)).append($("<td>").text(convertedDate)).append($("<td>").text(item.symbol)).append($("<td>").text(item.name)).append($("<td>").text(item.amount)).append($("<td>").text('CHF ' + item.buyprice)).append($("<td>").text('CHF ' + totalBuyPrice.toFixed(2))).append($("<td>").text('CHF ' + roundedPrice)).append($("<td>").text(percentageWinLoss + '%')).append($("<td>").text('CHF ' + totalValue)).append($(
                                 "<td>\n" +
                                 "<div class=\"btn-group btn-group-sm\" role=\"group\"><a class=\"btn btn-light\" role=\"button\" href=\"/investment/edit?id=" + item.id + "\"> <i class=\"fa fa-edit\"></i></a><button class=\"btn btn-light\" data-id=\"" + item.id + "\" type=\"button\" data-bs-target=\"#confirm-modal\" data-bs-toggle=\"modal\"> <i class=\"fa fa-trash\"></i></button></div>\n" +
                                 "</td></tr>"
