@@ -4,34 +4,53 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>WebApp</title>
+    <title>Register - Brand</title>
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/fonts/fontawesome5-overrides.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.1.0/dist/flatly/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&amp;display=swap">
     <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
 
-<body>
-    <div class="container" style="display:flex;flex-direction:column;justify-content:center;">
-        <div class="page-header">
-            <h2 class="text-center"><strong>Register</strong></h2>
-        </div>
-        <form id="form" method="post">
-            <div class="form-group mb-3"><input class="form-control" type="text" name="name" placeholder="Name"></div>
-            <div class="form-group mb-3"><input class="form-control" type="email" name="email" placeholder="Email"></div>
-            <div class="form-group mb-3"><input class="form-control" type="password" name="password" placeholder="Password"></div>
-            <div class="form-group mb-3"><button class="btn btn-primary d-block w-100" type="submit">Register</button></div>
-        </form>
-    </div>
-    <div class="modal fade" role="dialog" tabindex="-1" id="error-modal">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header" style="background-color: #e85e6c;">
-                    <h1 class="text-white">Ooops!</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+<body class="bg-gradient-primary">
+    <div class="container">
+        <div class="card shadow-lg o-hidden border-0 my-5">
+            <div class="card-body p-0">
+                <div class="row">
+                    <div class="col-lg-5 d-none d-lg-flex">
+                        <div class="flex-grow-1 bg-register-image" style="background-image: url(&quot;../assets/img/login.jpg&quot;);"></div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="p-5">
+                            <div class="text-center">
+                                <h4 class="text-dark mb-4">Create an Account!</h4>
+                            </div>
+                            <form id="form" method="post">
+                                <div class="form-group mb-3"><input class="form-control" type="text" name="name" placeholder="Name"></div>
+                                <div class="form-group mb-3"><input class="form-control" type="email" name="email" placeholder="Email"></div>
+                                <div class="form-group mb-3"><input class="form-control" type="password" name="password" placeholder="Password"></div>
+                                <div class="form-group mb-3"><button class="btn btn-primary d-block w-100" type="submit">Register</button></div>
+                            </form>
+                            <div class="text-center"><a class="small" href="/login">Already have an account? Login!</a></div>
+                        </div>
+                    </div>
+                    <div class="modal fade" role="dialog" tabindex="-1" id="error-modal">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header" style="background-color: #e85e6c;">
+                                    <h1 class="text-white">Ooops!</h1><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p class="text-truncate text-primary" id="error-text"></p>
+                                </div>
+                                <div class="modal-footer"><button class="btn btn-warning d-block w-100" type="button" data-bs-dismiss="modal">Try Again</button></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="modal-body">
-                    <p class="text-truncate text-primary" id="error-text"></p>
-                </div>
-                <div class="modal-footer"><button class="btn btn-warning d-block w-100" type="button" data-bs-dismiss="modal">Try Again</button></div>
             </div>
         </div>
     </div>
