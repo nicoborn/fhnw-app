@@ -88,6 +88,7 @@
                                             <th>Total price</th>
                                             <th>Current price</th>
                                             <th>Win / loss</th>
+                                            <th>Total value</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -103,6 +104,7 @@
                                             <th>Total price</th>
                                             <th>Current price</th>
                                             <th>Win / loss</th>
+                                            <th>Total value</th>
                                             <th></th>
                                         </tr>
                                     </tfoot>
@@ -185,8 +187,11 @@
                             // Percentage since buy
                             var percentageWinLoss = (((actualPrice / item.buyprice) * 100) - 100).toFixed(2);
 
+                            // Total value
+                            var totalValue = (totalBuyPrice * (actualPrice / item.buyprice)).toFixed(2);
+
                             // Print table
-                            $("#tableData").append($("<tr>").append($("<td>").text(item.id)).append($("<td>").text(convertedDate)).append($("<td>").text(item.symbol)).append($("<td>").text(item.name)).append($("<td>").text(item.amount)).append($("<td>").text('CHF ' + item.buyprice)).append($("<td>").text('CHF ' + totalBuyPrice)).append($("<td>").text('CHF ' + roundedPrice)).append($("<td>").text(percentageWinLoss + '%')).append($(
+                            $("#tableData").append($("<tr>").append($("<td>").text(item.id)).append($("<td>").text(convertedDate)).append($("<td>").text(item.symbol)).append($("<td>").text(item.name)).append($("<td>").text(item.amount)).append($("<td>").text('CHF ' + item.buyprice)).append($("<td>").text('CHF ' + totalBuyPrice)).append($("<td>").text('CHF ' + roundedPrice)).append($("<td>").text(percentageWinLoss + '%')).append($("<td>").text('CHF ' + totalValue)).append($(
                                 "<td>\n" +
                                 "<div class=\"btn-group btn-group-sm\" role=\"group\"><a class=\"btn btn-light\" role=\"button\" href=\"/investment/edit?id=" + item.id + "\"> <i class=\"fa fa-edit\"></i></a><button class=\"btn btn-light\" data-id=\"" + item.id + "\" type=\"button\" data-bs-target=\"#confirm-modal\" data-bs-toggle=\"modal\"> <i class=\"fa fa-trash\"></i></button></div>\n" +
                                 "</td></tr>"
