@@ -192,6 +192,9 @@
             function getPrice(symbol) {
                 $.getJSON('https://data.messari.io/api/v1/assets/' + symbol + '/metrics', function(data) {
                     console.log(data);
+                    console.log(data.data);
+                    console.log(data.data.market_data);
+                    console.log(data.market_data);
                     return data.data.market_data.price_usd;
                 });
             }
