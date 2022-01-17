@@ -177,7 +177,13 @@
                         var totalBuyPrice = item.amount * item.buyprice;
                         var symbol = item.symbol.toString();
                         alert("symbol: " + symbol)
-                        var actualPrice = getPrice(symbol);
+                        var actualPrice = 0;
+
+                        $.getJSON('https://data.messari.io/api/v1/assets/' + symbol + '/metrics', function(data) {
+                            console.log(data.data.market_data.price_usd);
+                            actualPrice = data.data.market_data.price_usd;
+                        });
+
                         alert(actualPrice);
                         
                         $("#tableData").append($("<tr>").append($("<td>").text(item.id)).append($("<td>").text(convertedDate)).append($("<td>").text(item.symbol)).append($("<td>").text(item.name)).append($("<td>").text(item.amount)).append($("<td>").text(item.buyprice)).append($("<td>").text(totalBuyPrice)).append($("<td>").text(actualPrice)).append($(
@@ -186,16 +192,6 @@
                             "</td></tr>"
                         )));
                     });
-                });
-            }
-
-            function getPrice(symbol) {
-                $.getJSON('https://data.messari.io/api/v1/assets/' + symbol + '/metrics', function(data) {
-                    console.log(data);
-                    console.log(data.data);
-                    console.log(data.data.market_data.price_usd);
-                    console.log(data.market_data);
-                    return data.data.market_data.price_usd;
                 });
             }
 
