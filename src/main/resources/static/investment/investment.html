@@ -160,7 +160,7 @@
     <script>
         $(document).ready(function () {
             $(loadData());
-            $(getPrice());
+            
             function loadData() {
                 getInvestments(function (result) {
                     $("#tableData").empty();
@@ -178,6 +178,7 @@
                         var symbol = item.symbol.toString();
                         alert("symbol: " + symbol)
                         var actualPrice = getPrice(symbol);
+                        alert(actualPrice);
                         
                         $("#tableData").append($("<tr>").append($("<td>").text(item.id)).append($("<td>").text(convertedDate)).append($("<td>").text(item.symbol)).append($("<td>").text(item.name)).append($("<td>").text(item.amount)).append($("<td>").text(item.buyprice)).append($("<td>").text(totalBuyPrice)).append($("<td>").text(actualPrice)).append($(
                             "<td>\n" +
