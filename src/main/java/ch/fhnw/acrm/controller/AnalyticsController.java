@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping(path = "/analytics")
-public class IndexController {
+public class AnalyticsController {
 
     @GetMapping
     public String getAnalyticsView(){
