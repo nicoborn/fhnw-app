@@ -188,7 +188,7 @@
 
             function getPrice(symbol) {
                 $.getJSON('https://data.messari.io/api/v1/assets/' + symbol + '/metrics', function(data) {
-                    return data.data.market_data.price_usd;
+                    return data.data.market_data.price_usd.toString();
                 });
             }
 
