@@ -180,13 +180,14 @@
                         var actualPrice = "";
 
                         $.getJSON('https://data.messari.io/api/v1/assets/' + symbol + '/metrics', function(data) {
-                            console.log(data.data.market_data.price_usd);
                             var test = data.data.market_data.price_usd;
-                            alert(test);
+                            console.log('in variable: ' + test);
+                            console.log('in objekt: ' + data.data.market_data.price_usd);
                             actualPrice = test;
                         });
 
                         alert(actualPrice);
+                        console.log('actualPrice: ' + actualPrice);
                         
                         $("#tableData").append($("<tr>").append($("<td>").text(item.id)).append($("<td>").text(convertedDate)).append($("<td>").text(item.symbol)).append($("<td>").text(item.name)).append($("<td>").text(item.amount)).append($("<td>").text(item.buyprice)).append($("<td>").text(totalBuyPrice)).append($("<td>").text(actualPrice)).append($(
                             "<td>\n" +
