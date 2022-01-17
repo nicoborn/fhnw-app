@@ -177,11 +177,13 @@
                         var totalBuyPrice = item.amount * item.buyprice;
                         var symbol = item.symbol.toString();
                         alert("symbol: " + symbol)
-                        var actualPrice;
+                        var actualPrice = "";
 
                         $.getJSON('https://data.messari.io/api/v1/assets/' + symbol + '/metrics', function(data) {
                             console.log(data.data.market_data.price_usd);
-                            actualPrice = data.data.market_data.price_usd;
+                            var test = data.data.market_data.price_usd;
+                            alert(test);
+                            actualPrice = test;
                         });
 
                         alert(actualPrice);
