@@ -1,8 +1,7 @@
-# fh-api
-FH API
-# Expense tracker
+# ExpenseTracker
 
-This is an expense tracker, enabling the functionalities of Create, Read, Update and Delete for expenses after accessing the Web app through an authorized account.
+This is an expense tracker, enabling the functionalities of managing expenses as well as crypto investments.
+The web application is currently being developed and a initial version has been deployed to Heroku.
 
 #### Contents:
 - [Analysis](#analysis)
