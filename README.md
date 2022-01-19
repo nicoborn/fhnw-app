@@ -3,6 +3,8 @@
 This is an expense tracker, enabling the functionalities of managing expenses as well as crypto investments.
 The web application is currently being developed and a initial version has been deployed to Heroku.
 
+It can be accessed under the following URL: https://fhnw-project.herokuapp.com/
+
 #### Contents:
 - [Analysis](#analysis)
   - [Scenario](#scenario)
