@@ -43,14 +43,13 @@ The expense tracker allows companies, organizations and individuals to keep an o
 11. UC-11 [Analytics] As a [user], I want to be able to see analytics on my expenses and investments.
 12. UC-12 [Profile] As a [user], I want to be able to change my name, email and password.
 
-
 ### Use Case
-<img width="254" alt="image" src="https://user-images.githubusercontent.com/82437415/148421199-2feb4df0-920b-44aa-af2b-b19df82b785b.png">
+<img width="248" alt="image" src="https://user-images.githubusercontent.com/82437415/150107124-37feba59-f9a8-408d-908e-7b7de3dac7b4.png">
 
-- UC-1 [Login to expense tracker]: Agents can log-in after authorizing themselves with a viable username and password. 
+- UC-1 [Login to expense tracker]: Users can log-in after authorizing themselves with a viable username and password. 
 - UC-2 [Register User]: New users have the option to register themselves with new account details to access the Web app.
-- UC-3 [View/Edit expenses]: Agents can create, read, update and delete expenses.
-- UC-4 [Show expense list]: Agents can get an overview of their expenses as a list. The expense list is being created in a database.
+- UC-3 [Edit expenses/investments]: Users can create, read, update and delete expenses and investments. 
+- UC-4 [Show list of expenses/investments]: Users can get an overview of their expenses and investments as a list. The list is created in a database.
 
 ## Design
 
