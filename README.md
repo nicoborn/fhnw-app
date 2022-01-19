@@ -27,16 +27,22 @@ This is an expense tracker, enabling the functionalities of Create, Read, Update
 
 ### Scenario
 
-An expense tracker allows companies and organizations to keep an overview of their finances. Since receipts are easy to lose, this tracker app stores these important documents and hence provides a better overview of their expenses. 
+The expense tracker allows companies, organizations and individuals to keep an overview of their finances. Since receipts are easy to lose and a transaction history can easily get lost, this tracker app provides an overview and the ability to add, edit, delete expenses and crypto investments. Users are also able to receive analytical data on their expenses and investments.
 
 ### User Stories
-1.	As an online-shop owner, I want to have a Web app where I can track my expenses on my computer.
-2.	As an online-shop owner, I want to navigate through my and gain an overview of my finances.
-3.	As an online-shop owner, I want to analyze my expenses by creating lists in a database and select specific expenses.
-4.	As an online-shop owner, I want to edit and create lists in order to keep my finances up to date and retain an overview.
-5.	As an online-shop owner, I want to create an account to access the Web app.
-6.	As an online-shop owner, I want to log-in to the Web app to gain authorized access.
-7.	As an online-shop owner, I want to edit my profile so that my profile is up to date, and the data remains securely stored.
+1.	UC-1 [Responsiveness] As a [user], I want to have a Web app so that I can use it on different mobile devices and on desktop computers.
+2.	UC-2 [Usability] As a [user], I want to navigate through the WebApp and find all the functions in a easy way.
+3.	UC-3 [Login to expense tracker]: As a [user] i can log-in after authorizing myself with a viable username and password.
+4.	UC-4 [Dashboard] As a [user], I want to have a dashboard after i login.
+5.	UC-5 [Register to expense tracker]: As a [non-users], I can register an account by entering my name and desired username + password.
+6.	UC-6 [View Expenses] As a [user], I want to use list views so that I can explore and read my expenses.
+7.	UC-7 [Add and edit expenses] As a [user], I want to be able to add, edit and delete my expenses.
+8.  UC-8 [View investments] As a [user], I want to use list views so that I can explore and read my investments.
+9.  UC-9 [Add and edit investments] As a [user], I want to be able to add, edit and delete my investments.
+10. UC-10 [Investment prices] As a [user], I want to be able to see the actual price of my investments.
+11. UC-11 [Analytics] As a [user], I want to be able to see analytics on my expenses and investments.
+12. UC-12 [Profile] As a [user], I want to be able to change my name, email and password.
+
 
 ### Use Case
 <img width="254" alt="image" src="https://user-images.githubusercontent.com/82437415/148421199-2feb4df0-920b-44aa-af2b-b19df82b785b.png">
