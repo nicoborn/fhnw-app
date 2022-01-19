@@ -6,7 +6,7 @@ The web application is currently being developed and a initial version has been 
 It can be accessed under the following URL: https://fhnw-project.herokuapp.com/
 
 An account with existing expenses and investments:
-```JSON
+```
 Username: born.nico@gmail.com
 Password: leave empty
 ```
