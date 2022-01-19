@@ -43,18 +43,17 @@ The expense tracker allows companies, organizations and individuals to keep an o
 12. As a user, I want to be able to change my name, email and password.
 
 ### Use Case
-<img width="248" alt="image" src="https://user-images.githubusercontent.com/82437415/150107124-37feba59-f9a8-408d-908e-7b7de3dac7b4.png">
+<img width="353" alt="image" src="https://user-images.githubusercontent.com/82437415/150137988-5424b7f4-efbd-4106-8f72-8c607ef57553.png">
 
 - UC-1 [Login]: Users can log-in after authorizing themselves with a valid username and password.
 - UC-2 [Register account]: New users can register themselves with their name, username and password.
-- UC-3 [Dashboard]: Users will see a dashboard after they successfully logged in.
-- UC-4 [View expenses]: Users can view their existing and already added expenses.
-- UC-5 [Edit expenses]: Users can create, read, update and delete expenses. 
-- UC-6 [View investments]: Users can view their existing and already added crypto investments. 
-- UC-7 [Edit expenses]: Users can create, read, update and delete crypto investments. 
-- UC-8 [Investment prices]: Users can view the current prices of their crypto investments.
-- UC-9 [Analytics]: Users can view analytical data of their expenses and crypto investments.
-- UC-10 [Profile]: Users can update their profile data (name, username, password).
+- UC-3 [Update Profile]: Users can update their profile data (name, username, password).
+- UC-4 [Dashboard]: Users will see a dashboard after they successfully logged in.
+- UC-5 [Edit/View expenses]: Users can view their existing and already added expenses. Users can also create, read, update and delete expenses. 
+- UC-6 [Edit/View investments]: Users can view their existing and already added crypto investments. Users can also create, read, update and delete crypto investments. 
+- UC-7 [Investment prices]: Users can view the current prices of their crypto investments.
+- UC-8 [Analytics]: Users can view analytical data of their expenses and crypto investments.
+
 
 ## Design
 
@@ -200,8 +199,5 @@ Password: leave empty
 3.	Design: conception
 4.	Layout: create website
 5.	Implementation: technical implementation, implementation of business logic and API
-6.	Test: testing: final acceptance
+6.	Test: final acceptance
 7.	Launch: Launch of Web application on Heroku
-
-### Maintainer
-- [Andreas Martin](https://andreasmartin.ch)
