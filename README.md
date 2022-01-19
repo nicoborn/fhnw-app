@@ -191,7 +191,6 @@ Password: leave empty
 - Head of the Project: Nico Born
 - All-rounder: Marino Bottacin
 - All-rounder: Laurent Zeugin
-- All-rounder: Kenan Ahmetasevic
 
 ### Milestones
 ![](images/project-phases.png)
