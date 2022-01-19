@@ -27,24 +27,25 @@ This is an expense tracker, enabling the functionalities of Create, Read, Update
 
 ### Scenario
 
-An expense tracker allows companies and organizations to keep an overview of their finances. Since receipts are easy to lose, this tracker app stores these important documents and hence provides a better overview of their expenses. 
+An expense tracker allows companies, organizations and individuals to keep an overview of their finances. Since receipts are easy to lose and a transaction history can easily get lost, this tracker app provides an overview of expenses and investments. 
 
 ### User Stories
 1.	As an online-shop owner, I want to have a Web app where I can track my expenses on my computer.
-2.	As an online-shop owner, I want to navigate through my and gain an overview of my finances.
+2.	As an online-shop owner, I want to navigate through my expenses and gain an overview of my finances.
 3.	As an online-shop owner, I want to analyze my expenses by creating lists in a database and select specific expenses.
 4.	As an online-shop owner, I want to edit and create lists in order to keep my finances up to date and retain an overview.
 5.	As an online-shop owner, I want to create an account to access the Web app.
 6.	As an online-shop owner, I want to log-in to the Web app to gain authorized access.
 7.	As an online-shop owner, I want to edit my profile so that my profile is up to date, and the data remains securely stored.
+8.	As an online-shop owner, I want to keep track of my cryptocurrency investments.
 
 ### Use Case
 <img width="254" alt="image" src="https://user-images.githubusercontent.com/82437415/148421199-2feb4df0-920b-44aa-af2b-b19df82b785b.png">
 
 - UC-1 [Login to expense tracker]: Agents can log-in after authorizing themselves with a viable username and password. 
 - UC-2 [Register User]: New users have the option to register themselves with new account details to access the Web app.
-- UC-3 [View/Edit expenses]: Agents can create, read, update and delete expenses.
-- UC-4 [Show expense list]: Agents can get an overview of their expenses as a list. The expense list is being created in a database.
+- UC-3 [View/Edit expenses]: Agents can create, read, update and delete expenses and investments.
+- UC-4 [Show expense list]: Agents can get an overview of their expenses and investments as a list. The list of expenses is created in a database.
 
 ## Design
 
