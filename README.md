@@ -8,8 +8,7 @@ It can be accessed under the following URL: https://fhnw-project.herokuapp.com/
 An account with existing expenses and investments:
 
 Username: born.nico@gmail.com
-
-Password: <empty>
+Password: leave empty
 
 #### Contents:
 - [Analysis](#analysis)
