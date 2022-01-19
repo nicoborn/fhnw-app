@@ -80,7 +80,7 @@ The package 'https://fhnw-project.herokuapp.com/' contains the data of created p
 ![](images/business-service.png)
 
 ### Endpoint Design
-**Path**: [`/api/customer`](/api/customer) 
+**Path**: [`/api/expense`](/api/expense) 
 
 **Method:** `POST`
 
@@ -88,21 +88,16 @@ The package 'https://fhnw-project.herokuapp.com/' contains the data of created p
 
 ```JSON
 {
-  "agent": {
-    "customers": [
-      null
-    ],
-    "email": "string",
-    "id": 0,
-    "name": "string",
-    "password": "string",
-    "remember": "string"
-  },
-  "email": "string",
-  "id": 0,
-  "mobile": "string",
-  "name": "string"
-}
+      "id":48,
+      "name":"Abendessen",
+      "description":"Restaurant Classico Arlesheim",
+      "amount":80.0,
+      "expenseDate":"2022-01-15",
+      "category":{
+         "id":1,
+         "name":"Nahrung"
+      }
+   },
 ```
 
 • *Optional:* `...`
