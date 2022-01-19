@@ -3,14 +3,6 @@
 This is an expense tracker, enabling the functionalities of managing expenses as well as crypto investments.
 The web application is currently being developed and a initial version has been deployed to Heroku.
 
-It can be accessed under the following URL: https://fhnw-project.herokuapp.com/
-
-An account with existing expenses and investments:
-```
-Username: born.nico@gmail.com
-Password: leave empty
-```
-
 #### Contents:
 - [Analysis](#analysis)
   - [Scenario](#scenario)
@@ -185,7 +177,13 @@ This Web application is relying on the following frontend technology/libraries:
 This spring boot has been deployed to Heroku by using a pre-configuration scripts `app.json` and `Procfile`.
 
 ## User Guide
-The Web application can be accessed over the browser by using the following address: `https://***.herokuapp.com/`. And the Swagger-UI can be access using the specific page: `https://***.herokuapp.com/swagger-ui/`.
+The Web application can be accessed over the browser by using the following address: `https://fhnw-project.herokuapp.com/`
+
+An account with existing expenses and investments:
+```
+Username: born.nico@gmail.com
+Password: leave empty
+```
 
 ## Project Management
 
