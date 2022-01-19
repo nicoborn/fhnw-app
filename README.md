@@ -43,7 +43,7 @@ The expense tracker allows companies, organizations and individuals to keep an o
 12. As a user, I want to be able to change my name, email and password.
 
 ### Use Case
-<img width="353" alt="image" src="https://user-images.githubusercontent.com/82437415/150137988-5424b7f4-efbd-4106-8f72-8c607ef57553.png">
+<img width="344" alt="image" src="https://user-images.githubusercontent.com/82437415/150144516-9c37c1c8-4ab1-4cf5-9afa-f62a36c78943.png">
 
 - UC-1 [Login]: Users can log-in after authorizing themselves with a valid username and password.
 - UC-2 [Register account]: New users can register themselves with their name, username and password.
