@@ -30,26 +30,32 @@ This is an expense tracker, enabling the functionalities of Create, Read, Update
 The expense tracker allows companies, organizations and individuals to keep an overview of their finances. Since receipts are easy to lose and a transaction history can easily get lost, this tracker app provides an overview and the ability to add, edit, delete expenses and crypto investments. Users are also able to receive analytical data on their expenses and investments.
 
 ### User Stories
-1.	UC-1 [Responsiveness] As a [user], I want to have a Web app so that I can use it on different mobile devices and on desktop computers.
-2.	UC-2 [Usability] As a [user], I want to navigate through the WebApp and find all the functions in a easy way.
-3.	UC-3 [Login to expense tracker]: As a [user] i can log-in after authorizing myself with a viable username and password.
-4.	UC-4 [Dashboard] As a [user], I want to have a dashboard after i login.
-5.	UC-5 [Register to expense tracker]: As a [non-users], I can register an account by entering my name and desired username + password.
-6.	UC-6 [View Expenses] As a [user], I want to use list views so that I can explore and read my expenses.
-7.	UC-7 [Add and edit expenses] As a [user], I want to be able to add, edit and delete my expenses.
-8.  UC-8 [View investments] As a [user], I want to use list views so that I can explore and read my investments.
-9.  UC-9 [Add and edit investments] As a [user], I want to be able to add, edit and delete my investments.
-10. UC-10 [Investment prices] As a [user], I want to be able to see the actual price of my investments.
-11. UC-11 [Analytics] As a [user], I want to be able to see analytics on my expenses and investments.
-12. UC-12 [Profile] As a [user], I want to be able to change my name, email and password.
+1.	As a user, I want to have a Web app so that I can use it on different mobile devices and on desktop computers.
+2.	As a user, I want to navigate through the WebApp and find all the functions in a easy way.
+3.	As a user I can log-in after authorizing myself with a username and password.
+4.	As a non-user, I want to register an account by entering my name and desired username + password.
+5.	As a user, I want to have a dashboard after i login.
+6.	As a user, I want to use list views so that I can explore and read my expenses.
+7.	As a user, I want to be able to add, edit and delete my expenses.
+8.  As a user, I want to use list views so that I can explore and read my crypto investments.
+9.  As a user, I want to be able to add, edit and delete my crypto investments.
+10. As a user, I want to be able to see the current price of my crypto investments.
+11. As a user, I want to be able to see analytics on my expenses and crypto investments.
+12. As a user, I want to be able to change my name, email and password.
 
 ### Use Case
 <img width="248" alt="image" src="https://user-images.githubusercontent.com/82437415/150107124-37feba59-f9a8-408d-908e-7b7de3dac7b4.png">
 
-- UC-1 [Login to expense tracker]: Users can log-in after authorizing themselves with a viable username and password. 
-- UC-2 [Register User]: New users have the option to register themselves with new account details to access the Web app.
-- UC-3 [Edit expenses/investments]: Users can create, read, update and delete expenses and investments. 
-- UC-4 [Show list of expenses/investments]: Users can get an overview of their expenses and investments as a list. The list is created in a database.
+- UC-1 [Login]: Users can log-in after authorizing themselves with a valid username and password.
+- UC-2 [Register account]: New users have the option to register themselves with their name, username and password.
+- UC-3 [Dashboard]: Users will see a dashboard after they successfully logged in.
+- UC-4 [View expenses]: Users can view their existing and already added expenses.
+- UC-5 [Edit expenses]: Users can create, read, update and delete expenses. 
+- UC-6 [View investments]: Users can view their existing and already added crypto investments. 
+- UC-7 [Edit expenses]: Users can create, read, update and delete crypto investments. 
+- UC-8 [Investment prices]: Users can view the current prices of their crypto investments.
+- UC-9 [Analytics]: Users can view analytical data of their expenses and crypto investments.
+- UC-10 [Profile]: Users can update their profile data (name, username, password).
 
 ## Design
 
