@@ -47,7 +47,7 @@ The expense tracker allows companies, organizations and individuals to keep an o
 <img width="248" alt="image" src="https://user-images.githubusercontent.com/82437415/150107124-37feba59-f9a8-408d-908e-7b7de3dac7b4.png">
 
 - UC-1 [Login]: Users can log-in after authorizing themselves with a valid username and password.
-- UC-2 [Register account]: New users have the option to register themselves with their name, username and password.
+- UC-2 [Register account]: New users can register themselves with their name, username and password.
 - UC-3 [Dashboard]: Users will see a dashboard after they successfully logged in.
 - UC-4 [View expenses]: Users can view their existing and already added expenses.
 - UC-5 [Edit expenses]: Users can create, read, update and delete expenses. 
