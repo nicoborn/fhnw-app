@@ -78,7 +78,7 @@ The assets (HTML, CSS, JavaScript, image and font files) has been exported and w
 
 The `ch.fhnw.acrm.data.domain` package contains the following domain objects / entities including getters and setters:
 
-<img src="https://i.imgur.com/FeVOlmW.png" alt="uml" width="500"/>
+<img src="https://i.imgur.com/FeVOlmW.png" alt="uml" width="100%"/>
 
 ### Business Logic Design
 
