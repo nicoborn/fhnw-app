@@ -87,7 +87,8 @@ The package 'https://fhnw-project.herokuapp.com/' contains the data of created p
 **Sample Request**  • *Header:* `Content-Type: application/json` • *Body:*
 
 ```JSON
-{
+[
+   {
       "id":48,
       "name":"Abendessen",
       "description":"Restaurant Classico Arlesheim",
@@ -97,7 +98,8 @@ The package 'https://fhnw-project.herokuapp.com/' contains the data of created p
          "id":1,
          "name":"Nahrung"
       }
-   },
+   }
+]
 ```
 
 • *Optional:* `...`
