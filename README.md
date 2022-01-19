@@ -87,41 +87,30 @@ The package 'https://fhnw-project.herokuapp.com/' contains the data of created p
 **Sample Request**  • *Header:* `Content-Type: application/json` • *Body:*
 
 ```JSON
-[
-   {
-      "id":48,
-      "name":"Abendessen",
-      "description":"Restaurant Classico Arlesheim",
-      "amount":80.0,
-      "expenseDate":"2022-01-15",
-      "category":{
-         "id":1,
-         "name":"Nahrung"
-      }
-   }
-]
+{
+  "name":"Abendessen",
+  "description":"Restaurant Classico Arlesheim",
+  "amount":80.0,
+  "expenseDate":"2022-01-15",
+  "category":{
+      "id":1,
+      "name":"Nahrung"
+  }
+}
 ```
-
-• *Optional:* `...`
   
 **Success Response**  • *Code:* `200 OK` • *Sample Body:*
 
 ```JSON
 {
-  "agent": {
-    "customers": [
-      null
-    ],
-    "email": "string",
-    "id": 0,
-    "name": "string",
-    "password": "string",
-    "remember": "string"
-  },
-  "email": "string",
-  "id": 0,
-  "mobile": "string",
-  "name": "string"
+  "name":"Abendessen",
+  "description":"Restaurant Classico Arlesheim",
+  "amount":80.0,
+  "expenseDate":"2022-01-15",
+  "category":{
+      "id":1,
+      "name":"Nahrung"
+  }
 }
 ```
 
