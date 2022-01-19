@@ -204,3 +204,5 @@ Password: leave empty
 6.	Test: testing: final acceptance
 7.	Launch: Launch of Web application on Heroku
 
+### Maintainer
+- [Andreas Martin](https://andreasmartin.ch)
