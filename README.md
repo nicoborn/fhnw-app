@@ -201,8 +201,5 @@ Password: leave empty
 3.	Design: conception
 4.	Layout: create website
 5.	Implementation: technical implementation, implementation of business logic and API
-6.	Test: testing: final acceptance
+6.	Test: final acceptance
 7.	Launch: Launch of Web application on Heroku
-
-### Maintainer
-- [Andreas Martin](https://andreasmartin.ch)
