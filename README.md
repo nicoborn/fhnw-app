@@ -82,9 +82,10 @@ The `ch.fhnw.acrm.data.domain` package contains the following domain objects / e
 
 ### Business Logic Design
 
-The package 'https://fhnw-project.herokuapp.com/' contains the data of created persons. With this data, users are created who can store information about their spending.
+The `ch.fhnw.acrm.business.service` package contains the following domain objects / entities including getters and setters:
 
-![](images/business-service.png)
+<img src="https://i.imgur.com/RZqUWgT.png" alt="uml" width="100%"/>
+
 
 ### Endpoint Design
 **Path**: [`/api/expense`](/api/expense) 
